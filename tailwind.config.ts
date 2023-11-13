@@ -1,6 +1,5 @@
-import type { Config } from 'tailwindcss'
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,13 +7,53 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        miami_red: '#C41230',
+        miami_accent_red: '#AD102A',
+        miami_light_tan: '#EDECE2',
+        miami_gold: '#EFDB72',
+        miami_warm_white: '#FAF9F7',
+        green: {
+          50: '#30AF5B',
+          90: '#292C27',
+        },
+        gray: {
+          10: '#EEEEEE',
+          20: '#A2A2A2',
+          30: '#7B7B7B',
+          50: '#585858',
+          90: '#141414',
+        },
+        orange: {
+          50: '#FF814C',
+        },
+        blue: {
+          70: '#021639',
+        },
+        yellow: {
+          50: '#FEC601',
+        },
+      },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'miami-red-gradient': "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )",
+        'bg-img-1': "url('/bg-hero.jpg')",
+        'bg-img-2': "url('/img-2.png')",
+        'feature-bg': "url('/feature-bg.png')",
+        pattern: "url('/pattern.png')",
+        'pattern-2': "url('/pattern-bg.png')",
+      },
+      screens: {
+        xs: '400px',
+        '3xl': '1680px',
+        '4xl': '2200px',
+      },
+      maxWidth: {
+        '10xl': '1512px',
+      },
+      borderRadius: {
+        '5xl': '40px',
       },
     },
   },
   plugins: [],
-}
-export default config
+};
