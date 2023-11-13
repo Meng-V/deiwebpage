@@ -36,6 +36,8 @@ module.exports = {
       },
       backgroundImage: {
         'miami-red-gradient': "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )",
+        'library-logo-hori': "url('/ULB-Logos/Primary/Full-color and black text/Digital/jpeg/0721_PTier1_Libraries_HS_186KW_K_Digital.jpg')",
+        'library-logo-vert': "url('/ULB-Logos/Primary/Full-color and black text/Digital/jpeg/0721_PTier1_Libraries_VS_186KW_K_Digital.jpg')",
         'bg-img-1': "url('/bg-hero.jpg')",
         'bg-img-2': "url('/img-2.png')",
         'feature-bg': "url('/feature-bg.png')",
