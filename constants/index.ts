@@ -15,27 +15,79 @@ export const PEOPLE_URL = [
 ];
 
 // FEATURES SECTION
-export const FEATURES = [
+export const Block_Menu = [
   {
-    title: 'Real maps can be offline',
+    title: 'Inclusive Excellence at Miami University Libraries',
     icon: '/map.svg',
     variant: 'green',
-    description:
-      'We provide a solution for you to be able to use our application when climbing, yes offline maps you can use at any time there is no signal at the location',
+    menu_item: [
+      {
+        title: 'University Libraries Diversity Statement, Statement on Racism, and Land Acknowledgement',
+        link: '/',
+      },
+      {
+        title: 'DEI Committee',
+        link: '/',
+      },
+      {
+        title: 'Commitment to Inclusive Excellence',
+        link:'https://drive.google.com/file/d/1IxiHre74uvq01h4xuLa_PmKvGmTGmfn3/view',
+      },
+      {
+        title:'Diversity, Equity, and Inclusion FY23 Annual Report',
+        link:'https://drive.google.com/file/d/1GvV2cMRtTga9U5urkKVSkd0_QMEZNwuR/view?usp=sharing',
+      }
+    ]
   },
   {
-    title: 'Set an adventure schedule',
+    title: 'Resources available for you',
     icon: '/calendar.svg',
-    variant: 'green',
-    description:
-      "Schedule an adventure with friends. On holidays, there are many interesting offers from Hilink. That way, there's no more discussion",
+    variant: 'yellow',
+    menu_item: [
+      {
+        title: 'DEI Textbooks on Reserve',
+        link: 'https://libguides.lib.miamioh.edu/reserves-textbooks/coursematerial',
+      },
+      {
+        title: 'Heath and Wellness Kits',
+        link: 'http://lib.miamioh.edu/2022-04-19-new-health-and-wellness-kits-for-checkout-funded-by-student-technology-fee',
+      },
+      {
+        title: 'DEI titles in the digital leisure reading collection',
+        link:'https://www.lib.miamioh.edu/2022-01-24-popular-e-books-and-audiobooks-now-available-for-leisure-reading-through-axis-360',
+      },
+      {
+        title:'Accessibility Resources',
+        link:'https://www.lib.miamioh.edu/research/instruction/accessibility/'
+      },
+      {
+        title:'Lived Experiences: Race at Miami University',
+        link:'https://livedmu.lib.miamioh.edu/'
+      },
+      {
+        title:'Finding Freedom Summer Traveling Exhibit',
+        link:'https://findingfreedom.lib.miamioh.edu/'
+      }
+    ]
   },
   {
-    title: 'Technology using augment reality',
+    title: 'Partnerships',
     icon: '/tech.svg',
-    variant: 'green',
-    description:
-      'Technology uses augmented reality as a guide to your hiking trail in the forest to the top of the mountain. Already supported by the latest technology without an internet connection',
+    variant: 'gray',
+    menu_item: [
+      {
+        title: 'ACRL Diversity Alliance',
+        link: 'https://www.ala.org/acrl/issues/diversityalliance',
+      },
+      {
+        title: 'Butler Tech Project Search',
+        link: 'https://www.butlertech.org/transition-programs/project-search/',
+      },
+      {
+        title: 'OhioLINK Luminaries Program',
+        link:'https://www.ohiolink.edu/content/ohiolink_initiatives',
+      }
+    ]
   },
 ];
 

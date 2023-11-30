@@ -44,10 +44,11 @@ const Hero = () => {
           title="Diversity, Equity, and Inclusion at Miami University Libraries"
         />
       </div>
+
       <div className="flexEnd mt-10 px-6 lg:-mt-60 lg:mr-6">
         <div
-          className="bg-miami-red-gradient p-8 lg:max-w-[500px] xl:max-w-[734px] xl:rounded-5xl 
-        xl:px-16 xl:py-20 relative w-full overflow-hidden rounded-3xl "
+          className="bg-miami-red-gradient p-8 lg:max-w-[650px] xl:max-w-[850px] xl:rounded-5xl 
+        xl:px-16 xl:py-20 relative w-full overflow-hidden rounded-3xl"
         >
           <h2 className="regular-24 md:regular-32 2xl:regular-64 text-white">
             <strong>Inclusive Excellence</strong> @ Miami University Libraries
@@ -62,6 +63,27 @@ const Hero = () => {
             We promote programs, events, displays, services and other activities
             and resources to enhance student, faculty, staff, and community
             awareness.
+          </p>
+          <Image
+            src="/quote.svg"
+            alt="camp-2"
+            width={186}
+            height={219}
+            className="camp-quote"
+          />
+        </div>
+      </div>
+
+      <div className="flexStart mt-10 md:mt-0 px-6 lg:-mt-64 lg:mr-6">
+        <div
+          className="bg-miami-red-gradient p-8 lg:max-w-[250px] xl:max-w-[450px] xl:rounded-5xl 
+        xl:px-16 xl:py-20 relative w-full overflow-hidden rounded-3xl"
+        >
+          <p className="regular-24 text-white">
+            <strong>Contact the Libraries’ DEI Committee at</strong>{" "}
+            <a href="mailto:dulb-DEIcontact@miamioh.edu">
+              dulb-DEIcontact@miamioh.edu
+            </a>
           </p>
           <Image
             src="/quote.svg"

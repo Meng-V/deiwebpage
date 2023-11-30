@@ -1,4 +1,4 @@
-import { FEATURES } from "@/constants";
+import { Block_Menu } from "@/constants";
 import Image from "next/image";
 
 const Luminaries = () => {
@@ -28,7 +28,7 @@ const Luminaries = () => {
             <h2 className="bold-40 lg:bold-64 ">Our Features</h2>
           </div>
           <ul className="mt-10 grid gap-10 md:grid-cols-2 lg:mt-20 lg:gap-20">
-            {FEATURES.map((feature) => (
+            {Block_Menu.map((feature) => (
               <FeatureItem
                 title={feature.title}
                 key={feature.title}
