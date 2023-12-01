@@ -4,23 +4,29 @@ import Button from "./Button";
 const Heritage = () => {
   return (
     <section className="flexCenter w-full flex-col pb-[100px]">
+      <h2 className="bold-40 lg:bold-64 text-center">Heritage Programming</h2>
       <div className="get-app">
         <div className="z-20 flex w-full flex-1 flex-col items-start justify-center gap-12">
-          <h2 className="bold-40 lg:bold-64 xl:max-w-[320px]">
-            Get for free now!
-          </h2>
-          <p className="regular-16 text-gray-10">Available in iOS and Android</p>
-          <div className="flex w-full flex-col gap-3 whitespace-nowrap xl:flex-row">
+          <p className="regular-16">
+            Miami University Libraries has joined the Office of Institutional
+            Diversity & Inclusion in celebrating history and heritage weeks,
+            months, and special events. One of the primary ways the Libraries
+            observe these occasions is through resource guides. Each history and
+            heritage guide includes books, articles, movies, databases, and more
+            in order to provide resources to engage with diverse cultures. In
+            addition, the Libraries coordinate displays to showcase some of the
+            materials in the Libraries' collection. More information on heritage
+            programming, including a calendar of observances, can be found here.
+          </p>
+          <div className="flexStart w-full flex-col gap-3 whitespace-nowrap xl:flex-row">
             <Button
               type="button"
-              title="App Store"
-              icon="/apple.svg"
-              variant="btn_white"
-              full
+              title="Office of Transformational and Inclusive Excellence"
+              variant="btn_white_no_left_padding"
             />
             <Button
               type="button"
-              title="Play Store"
+              title="More information"
               icon="/android.svg"
               variant="btn_dark_green_outline"
               full

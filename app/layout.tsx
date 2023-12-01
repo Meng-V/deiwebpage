@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Head from 'next/head'
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -15,6 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css"  rel="stylesheet" />
+      </Head>
       <body>
         <Navigation />
         <main className="relative overflow-hidden">
