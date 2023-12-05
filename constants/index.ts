@@ -4,6 +4,7 @@ export const NAV_LINKS = [
   { href: '/', key: 'research_and_support', label: 'Research and Support' },
   { href: '/', key: 'use_the_librarie', label: 'Use the Libraries' },
   { href: '/', key: 'about', label: 'About' },
+  { href: '/video', key: 'video', label: 'Video' },
 ];
 
 // CAMP SECTION
