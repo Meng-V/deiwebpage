@@ -24,6 +24,7 @@ export default function RootLayout({
         <main className="relative overflow-hidden">
           {children}</main>
         <Footer />
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
       </body>
     </html>
   );
