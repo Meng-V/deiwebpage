@@ -108,7 +108,7 @@ const Luminaries = () => {
               {({ selectedIndex }) => (
                 <>
                   {days.map((day, dayIndex) => (
-                    <div key={day.dateTime} className="relative lg:pl-8">
+                    <div key={dayIndex} className="relative lg:pl-8">
                       <DiamondIcon
                         className={clsx(
                           "absolute left-[-0.5px] top-[0.5625rem] hidden h-1.5 w-1.5 overflow-visible lg:block",
@@ -131,12 +131,11 @@ const Luminaries = () => {
                             {day.name}
                           </Tab>
                         </div>
-                        <time
-                          dateTime={day.dateTime}
-                          className="mt-1.5 block text-2xl font-semibold tracking-tight text-blue-900"
+                        <div
+                          className="mt-1.5 block text-2xl font-semibold tracking-tight text-blue-900 text-wrap-balance"
                         >
                           {day.date}
-                        </time>
+                        </div>
                       </div>
                     </div>
                   ))}

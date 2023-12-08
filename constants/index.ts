@@ -152,8 +152,8 @@ import waylonHydenImage from '@/public/images/avatars/waylon-hyden.jpg'
 
 export const days = [
   {
-    name: 'Opening Day',
-    date: 'April 4',
+    name: '2023-2024 Participant',
+    date: 'Marlow Zuch',
     dateTime: '2022-04-04',
     speakers: [
       {
@@ -161,36 +161,11 @@ export const days = [
         role: 'Designer at Globex Corporation',
         image: stevenMchailImage,
       },
-      {
-        name: 'Jaquelin Isch',
-        role: 'UX Design at InGen',
-        image: jaquelinIschImage,
-      },
-      {
-        name: 'Dianne Guilianelli',
-        role: 'General Manager at Initech',
-        image: dianneGuilianelliImage,
-      },
-      {
-        name: 'Ronni Cantadore',
-        role: 'Design Engineer at Weyland-Yutani',
-        image: ronniCantadoreImage,
-      },
-      {
-        name: 'Erhart Cockrin',
-        role: 'Product Lead at Cyberdyne Systems',
-        image: erhartCockrinImage,
-      },
-      {
-        name: 'Parker Johnson',
-        role: 'UI Designer at MomCorp',
-        image: parkerJohnsonImage,
-      },
     ],
   },
   {
-    name: 'Speakers & Workshops',
-    date: 'April 5',
+    name: '2022-2023 Participant',
+    date: 'Romero Pearson & Hal Howard',
     dateTime: '2022-04-05',
     speakers: [
       {
@@ -203,31 +178,11 @@ export const days = [
         role: 'Programmer at Umbrella Corp',
         image: ibrahimFraschImage,
       },
-      {
-        name: 'Cathlene Burrage',
-        role: 'Frontend Developer at Buy n Large',
-        image: cathleneBurrageImage,
-      },
-      {
-        name: 'Rinaldo Beynon',
-        role: 'Data Scientist at Rekall',
-        image: rinaldoBeynonImage,
-      },
-      {
-        name: 'Waylon Hyden',
-        role: 'DevOps at RDA Corporation',
-        image: waylonHydenImage,
-      },
-      {
-        name: 'Giordano Sagucio',
-        role: 'Game Developer at Soylent Corp',
-        image: giordanoSagucioImage,
-      },
     ],
   },
   {
-    name: 'Interviews',
-    date: 'April 6',
+    name: '2021-2022 Participant',
+    date: 'Hal Howard & Ashley Sankey',
     dateTime: '2022-04-06',
     speakers: [
       {
@@ -239,26 +194,6 @@ export const days = [
         name: 'Heather Terry',
         role: 'Backend Developer at Xanatos Enterprises',
         image: heatherTerryImage,
-      },
-      {
-        name: 'Piers Wilkins',
-        role: 'Full stack Developer at BiffCo',
-        image: piersWilkinsImage,
-      },
-      {
-        name: 'Gordon Sanderson',
-        role: 'Mobile Developer at Cobra Industries',
-        image: gordonSandersonImage,
-      },
-      {
-        name: 'Kimberly Parsons',
-        role: 'Game Developer at Tyrell Corporation',
-        image: kimberlyParsonsImage,
-      },
-      {
-        name: 'Richard Astley',
-        role: 'CEO at Roll Out',
-        image: richardAstley,
       },
     ],
   },
