@@ -2,9 +2,9 @@
 
 import { grants } from "@/constants";
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+// function classNames(...classes) {
+//   return classes.filter(Boolean).join(" ");
+// }
 
 export default function Example() {
   return (
