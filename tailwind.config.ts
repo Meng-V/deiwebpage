@@ -4,7 +4,6 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     extend: {
@@ -35,6 +34,7 @@ module.exports = {
           50: '#FEC601',
         },
       },
+      
       backgroundImage: {
         'miami-red-gradient': "radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% )",
         'library-logo-hori': "url('/ULB-Logos/Primary/Full-color and black text/Digital/jpeg/0721_PTier1_Libraries_HS_186KW_K_Digital.jpg')",
@@ -58,7 +58,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require('flowbite/plugin')
-  ],
+  plugins: [],
 };

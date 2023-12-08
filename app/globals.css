@@ -14,6 +14,15 @@ body {
   font-family: Inter;
 }
 
+a {
+  text-decoration: underline;
+  color: #AD102A;
+}
+
+p{
+  @apply my-4;
+}
+
 @layer utilities {
   .btn_white { 
     @apply  border-white bg-white px-8 py-3 text-green-50
