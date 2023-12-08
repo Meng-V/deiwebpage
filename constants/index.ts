@@ -130,71 +130,88 @@ export const SOCIALS = {
   ],
 };
 
-import andrewGreeneImage from "@/public/images/avatars/andrew-greene.jpg"
-import cathleneBurrageImage from '@/public/images/avatars/cathlene-burrage.jpg'
-import damarisKimuraImage from '@/public/images/avatars/damaris-kimura.jpg'
-import dianneGuilianelliImage from '@/public/images/avatars/dianne-guilianelli.jpg'
-import erhartCockrinImage from '@/public/images/avatars/erhart-cockrin.jpg'
-import giordanoSagucioImage from '@/public/images/avatars/giordano-sagucio.jpg'
-import gordonSandersonImage from '@/public/images/avatars/gordon-sanderson.jpg'
-import heatherTerryImage from '@/public/images/avatars/heather-terry.jpg'
-import ibrahimFraschImage from '@/public/images/avatars/ibrahim-frasch.jpg'
-import jaquelinIschImage from '@/public/images/avatars/jaquelin-isch.jpg'
-import kimberlyParsonsImage from '@/public/images/avatars/kimberly-parsons.jpg'
-import parkerJohnsonImage from '@/public/images/avatars/parker-johnson.jpg'
-import piersWilkinsImage from '@/public/images/avatars/piers-wilkins.jpg'
-import richardAstley from '@/public/images/avatars/richard-astley.jpg'
-import rinaldoBeynonImage from '@/public/images/avatars/rinaldo-beynon.jpg'
-import ronniCantadoreImage from '@/public/images/avatars/ronni-cantadore.jpg'
-import stevenMchailImage from '@/public/images/avatars/steven-mchail.jpg'
-import waylonHydenImage from '@/public/images/avatars/waylon-hyden.jpg'
+import MarlowZuchImage from "@/public/Luminaries/placeholder.jpg"
+import RomeroPearsonImage from '@/public/Luminaries/RomeroPearson.jpeg'
+import HalHowardImage from '@/public/Luminaries/HalHoward.jpeg'
+import AshleySankeyImage from '@/public/Luminaries/AshleySankey.jpeg'
 
 
 export const days = [
   {
     name: '2023-2024 Participant',
     date: 'Marlow Zuch',
-    dateTime: '2022-04-04',
     speakers: [
       {
-        name: 'Steven McHail',
-        role: 'Designer at Globex Corporation',
-        image: stevenMchailImage,
+        name: 'Marlow Zuch',
+        role: 'History major',
+        image: MarlowZuchImage,
       },
     ],
   },
   {
     name: '2022-2023 Participant',
     date: 'Romero Pearson & Hal Howard',
-    dateTime: '2022-04-05',
     speakers: [
       {
-        name: 'Damaris Kimura',
-        role: 'Senior Engineer at OCP',
-        image: damarisKimuraImage,
+        name: 'Romero Pearson',
+        role: 'Software Engineering major',
+        image: RomeroPearsonImage,
       },
       {
-        name: 'Ibrahim Frasch',
-        role: 'Programmer at Umbrella Corp',
-        image: ibrahimFraschImage,
+        name: 'Hal Howard',
+        role: 'Computer Science major',
+        image: HalHowardImage,
       },
     ],
   },
   {
     name: '2021-2022 Participant',
     date: 'Hal Howard & Ashley Sankey',
-    dateTime: '2022-04-06',
     speakers: [
       {
-        name: 'Andrew Greene',
-        role: 'Frontend Developer at Ultratech',
-        image: andrewGreeneImage,
+        name: 'Hal Howard',
+        role: 'Computer Science major',
+        image: HalHowardImage,
       },
       {
-        name: 'Heather Terry',
-        role: 'Backend Developer at Xanatos Enterprises',
-        image: heatherTerryImage,
+        name: 'Ashley Sankey',
+        role: 'History major',
+        image: AshleySankeyImage,
       },
     ],
   },
 ]
+
+
+export const grants = [
+  {
+    name: "New Arrivals",
+    href: "#",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce-images/home-page-01-category-01.jpg",
+  },
+  {
+    name: "Productivity",
+    href: "#",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce-images/home-page-01-category-02.jpg",
+  },
+  {
+    name: "Workspace",
+    href: "#",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce-images/home-page-01-category-04.jpg",
+  },
+  {
+    name: "Accessories",
+    href: "#",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce-images/home-page-01-category-05.jpg",
+  },
+  {
+    name: "Sale",
+    href: "#",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce-images/home-page-01-category-03.jpg",
+  },
+];

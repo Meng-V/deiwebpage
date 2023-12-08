@@ -60,7 +60,7 @@ const Luminaries = () => {
       <ImageClipPaths id={id} />
       <Container>
         <div className="mx-auto">
-          <h2 id="speakers-title" className="bold-40 lg:bold-64 text-center">
+          <h2>
             OhioLINK Luminaries Program
           </h2>
           <div className="mt-4 mx-8">

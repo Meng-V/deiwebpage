@@ -31,7 +31,7 @@ const HeroImage = ({ backgroundImage, title }: CampProps) => {
 
 const Hero = () => {
   return (
-    <section
+    <div
       className="2xl:max-container
     relative flex flex-col py-10 lg:mb-10 lg:py-20 xl:mb-20"
     >
@@ -94,7 +94,7 @@ const Hero = () => {
           />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -3,8 +3,8 @@ import Button from "./Button";
 
 const Heritage = () => {
   return (
-    <section className="flexCenter w-full flex-col pb-[100px]">
-      <h2 className="bold-40 lg:bold-64 text-center">Heritage Programming</h2>
+    <section>
+      <h2>Heritage Programming</h2>
       <div className="get-app">
         <div className="z-20 flex w-full flex-1 flex-col items-start justify-center gap-12">
           <p className="regular-16">

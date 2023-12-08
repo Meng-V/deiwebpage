@@ -1,105 +1,58 @@
-import { PEOPLE_URL } from "@/constants";
-import Image from "next/image";
+"use client";
 
-interface CampProps {
-  backgroundImage: string;
-  title: string;
-  subtitle: string;
-  peopleJoined: string;
+import { grants } from "@/constants";
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
 }
 
-const CampSite = ({
-  backgroundImage,
-  title,
-  subtitle,
-  peopleJoined,
-}: CampProps) => {
+export default function Example() {
   return (
-    <div
-      className={`h-full w-full min-w-[1100px] ${backgroundImage} bg-cover 
-      bg-no-repeat lg:rounded-r-5xl 2xl:rounded-5xl`}
-    >
-      <div
-        className="flex h-full flex-col 
-      items-start justify-between p-6 lg:px-20 lg:py-10"
-      >
-        <div className="flexCenter gap-4">
-          <div className="rounded-full bg-green-50 p-4">
-            <Image src="/folded-map.svg" alt="map" width={28} height={28} />
-          </div>
-          <div className="flex flex-col gap-1">
-            <h4 className="bold-18 text-white">{title}</h4>
-            <p className="regular-14 text-white">{subtitle}</p>
-          </div>
-        </div>
-        <div className="flexCenter gap-6">
-          <span className="flex -space-x-4 overflow-hidden">
-            {PEOPLE_URL.map((url) => (
-              <Image
-                className="inline-block h-10 w-10 rounded-full"
-                src={url}
-                key={url}
-                alt="person"
-                width={52}
-                height={52}
-              />
-            ))}
-          </span>
-          <p className="bold-16 md:bold-20 text-white">{peopleJoined}</p>
-        </div>
+    <section className="bg-white">
+      <div className="px-4">
+        <h2>DEI Grants Program</h2>
       </div>
-    </div>
-  );
-};
 
-const DEIGrants = () => {
-  return (
-    <section
-      className="2xl:max-container
-    relative flex flex-col py-10 lg:mb-10 lg:py-20 xl:mb-20"
-    >
-      <div
-        className="flex h-[340px] w-full items-start justify-start 
-      gap-8 overflow-x-auto lg:h-[400px] xl:h-[640px]"
-      >
-        <CampSite
-          backgroundImage="bg-bg-img-1"
-          title="Putuk Truno Camp"
-          subtitle="Prigen, Pasuruan"
-          peopleJoined="50+ joined"
-        />
-        <CampSite
-          backgroundImage="bg-bg-img-2"
-          title="Montain View"
-          subtitle="Somewhere"
-          peopleJoined="50+ joined"
-        />
-      </div>
-      <div className="flexEnd mt-10 px-6 lg:-mt-60 lg:mr-6">
-        <div
-          className="bg-green-50 p-8 lg:max-w-[500px] xl:max-w-[734px] xl:rounded-5xl 
-        xl:px-16 xl:py-20 relative w-full overflow-hidden rounded-3xl "
-        >
-          <h2 className="regular-24 md:regular-32 2xl:regular-64 capitalize text-white">
-            <strong>Feeling lost</strong> and not knowing the way?
-          </h2>
-          <p className="regular-14 xl:regular-16 mt-5 text-white">
-            Starting from the anxiety of the climbers when visiting a new
-            climbing location, the possibility of getting lost is very large.
-            That's why we are here for those of you who want to start an
-            adventure
-          </p>
-          <Image
-            src="/quote.svg"
-            alt="camp-2"
-            width={186}
-            height={219}
-            className="camp-quote"
-          />
+      <div className="mt-4 flow-root">
+        <div className="-my-2">
+          <div className="relative box-content h-80 overflow-x-auto py-2 xl:overflow-visible">
+            <div className="absolute flex space-x-8 px-4 sm:px-6 lg:px-8 xl:relative xl:grid xl:grid-cols-5 xl:gap-x-8 xl:space-x-0 xl:px-0">
+              {grants.map((grant) => (
+                <a
+                  key={grant.name}
+                  href={grant.href}
+                  className="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto"
+                >
+                  <span aria-hidden="true" className="absolute inset-0">
+                    <img
+                      src={grant.imageSrc}
+                      alt={grant.name}
+                      className="h-full w-full object-cover object-center"
+                    />
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"
+                  />
+                  <span className="relative mt-auto text-center text-xl font-bold text-white">
+                    {grant.name}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div className="mt-6 px-4 sm:hidden">
+        <a
+          href="#"
+          className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500"
+        >
+          Browse All DEI Grants
+          <span aria-hidden="true"> &rarr;</span>
+        </a>
       </div>
     </section>
   );
-};
-
-export default DEIGrants;
+}

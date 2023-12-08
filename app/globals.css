@@ -14,6 +14,10 @@ body {
   font-family: Inter;
 }
 
+section {
+  @apply relative flexCenter w-full flex-col pb-[100px];
+}
+
 a {
   text-decoration: underline;
   color: #AD102A;
@@ -21,6 +25,10 @@ a {
 
 p{
   @apply my-4;
+}
+
+h2{
+  @apply bold-40 lg:bold-64 text-center;
 }
 
 .text-wrap-balance{
