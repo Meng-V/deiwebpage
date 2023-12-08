@@ -9,7 +9,7 @@ import clsx from "clsx";
 import { Container } from "@/components/Container";
 import { DiamondIcon } from "@/components/DiamondIcon";
 
-import { days } from "@/constants";
+import { LumStudents } from "@/constants";
 
 function ImageClipPaths({
   id,
@@ -100,12 +100,12 @@ const Luminaries = () => {
             <Tab.List className="grid auto-cols-auto grid-flow-col justify-start gap-x-8 gap-y-10 whitespace-nowrap px-4 sm:mx-auto sm:max-w-2xl sm:grid-cols-3 sm:px-0 sm:text-center lg:grid-flow-row lg:grid-cols-1 lg:text-left">
               {({ selectedIndex }) => (
                 <>
-                  {days.map((day, dayIndex) => (
-                    <div key={dayIndex} className="relative lg:pl-8">
+                  {LumStudents.map((lum, lumIndex) => (
+                    <div key={lumIndex} className="relative lg:pl-8">
                       <DiamondIcon
                         className={clsx(
                           "absolute left-[-0.5px] top-[0.5625rem] hidden h-1.5 w-1.5 overflow-visible lg:block",
-                          dayIndex === selectedIndex
+                          lumIndex === selectedIndex
                             ? "fill-blue-600 stroke-blue-600"
                             : "fill-transparent stroke-slate-400"
                         )}
@@ -114,18 +114,18 @@ const Luminaries = () => {
                         <div
                           className={clsx(
                             "font-mono text-sm",
-                            dayIndex === selectedIndex
+                            lumIndex === selectedIndex
                               ? "text-blue-600"
                               : "text-slate-500"
                           )}
                         >
                           <Tab className="ui-not-focus-visible:outline-none">
                             <span className="absolute inset-0" />
-                            {day.name}
+                            {lum.year}
                           </Tab>
                         </div>
                         <div className="mt-1.5 block text-2xl font-semibold tracking-tight text-blue-900 text-wrap-balance">
-                          {day.date}
+                          {lum.name}
                         </div>
                       </div>
                     </div>
@@ -135,14 +135,14 @@ const Luminaries = () => {
             </Tab.List>
           </div>
           <Tab.Panels className="lg:col-span-3">
-            {days.map((day) => (
+            {LumStudents.map((lum) => (
               <Tab.Panel
-                key={day.date}
+                key={lum.name}
                 className="grid grid-cols-1 gap-x-8 gap-y-10 ui-not-focus-visible:outline-none sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3"
                 unmount={false}
               >
-                {day.speakers.map((speaker, speakerIndex) => (
-                  <div key={speakerIndex}>
+                {lum.display.map((person, personIndex) => (
+                  <div key={personIndex}>
                     <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
                       <div
                         className={clsx(
@@ -151,16 +151,16 @@ const Luminaries = () => {
                             "border-blue-300",
                             "border-indigo-300",
                             "border-sky-300",
-                          ][speakerIndex % 3]
+                          ][personIndex % 2]
                         )}
                       />
                       <div
                         className="absolute inset-0 bg-indigo-50"
-                        style={{ clipPath: `url(#${id}-${speakerIndex % 3})` }}
+                        style={{ clipPath: `url(#${id}-${personIndex % 2})` }}
                       >
                         <Image
                           className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
-                          src={speaker.image}
+                          src={person.image}
                           alt=""
                           priority
                           sizes="(min-width: 1280px) 17.5rem, (min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
@@ -168,10 +168,10 @@ const Luminaries = () => {
                       </div>
                     </div>
                     <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
-                      {speaker.name}
+                      {person.name}
                     </h3>
                     <p className="mt-1 text-base tracking-tight text-slate-500">
-                      {speaker.role}
+                      {person.major}
                     </p>
                   </div>
                 ))}

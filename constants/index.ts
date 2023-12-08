@@ -136,82 +136,82 @@ import HalHowardImage from '@/public/Luminaries/HalHoward.jpeg'
 import AshleySankeyImage from '@/public/Luminaries/AshleySankey.jpeg'
 
 
-export const days = [
+export const LumStudents = [
   {
-    name: '2023-2024 Participant',
-    date: 'Marlow Zuch',
-    speakers: [
+    year: '2023-2024 Participant',
+    name: 'Marlow Zuch',
+    display: [
       {
         name: 'Marlow Zuch',
-        role: 'History major',
+        major: 'History major',
         image: MarlowZuchImage,
       },
     ],
   },
   {
-    name: '2022-2023 Participant',
-    date: 'Romero Pearson & Hal Howard',
-    speakers: [
+    year: '2022-2023 Participant',
+    name: 'Romero Pearson & Hal Howard',
+    display: [
       {
         name: 'Romero Pearson',
-        role: 'Software Engineering major',
+        major: 'Software Engineering major',
         image: RomeroPearsonImage,
       },
       {
         name: 'Hal Howard',
-        role: 'Computer Science major',
+        major: 'Computer Science major',
         image: HalHowardImage,
       },
     ],
   },
   {
-    name: '2021-2022 Participant',
-    date: 'Hal Howard & Ashley Sankey',
-    speakers: [
+    year: '2021-2022 Participant',
+    name: 'Hal Howard & Ashley Sankey',
+    display: [
       {
         name: 'Hal Howard',
-        role: 'Computer Science major',
+        major: 'Computer Science major',
         image: HalHowardImage,
       },
       {
         name: 'Ashley Sankey',
-        role: 'History major',
+        major: 'History major',
         image: AshleySankeyImage,
       },
     ],
   },
 ]
 
+import LGBTQImage from '@/public/DEIGrants/LGBTQMovie.jpg'
+import MakeHERspaceImage from '@/public/DEIGrants/MakeHERspace.jpg'
+import MuralsImage from '@/public/DEIGrants/Murals.jpg'
+import SocialJusticeImage from '@/public/DEIGrants/SocialJustice.jpeg'
+import UNIDOSImage from '@/public/DEIGrants/UNIDOSGames.jpeg'
 
 export const grants = [
   {
-    name: "New Arrivals",
+    name: "LGBTQ Movie",
     href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-01-category-01.jpg",
+    imageSrc: LGBTQImage,
   },
   {
-    name: "Productivity",
+    name: "MakeHERspace",
     href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-01-category-02.jpg",
+    imageSrc: MakeHERspaceImage,
   },
   {
-    name: "Workspace",
+    name: "Murals",
     href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-01-category-04.jpg",
+    imageSrc: MuralsImage,
   },
   {
-    name: "Accessories",
+    name: "Social Justice Storytelling",
     href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-01-category-05.jpg",
+    imageSrc: SocialJusticeImage,
   },
   {
-    name: "Sale",
+    name: "UNIDOS Games",
     href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-01-category-03.jpg",
+    imageSrc: UNIDOSImage,
   },
 ];

@@ -1,6 +1,7 @@
 "use client";
 
 import { grants } from "@/constants";
+import Image from "next/image";
 
 // function classNames(...classes) {
 //   return classes.filter(Boolean).join(" ");
@@ -18,7 +19,7 @@ export default function Example() {
           funded through departmental budgets. We welcome grant ideas from all
           members of the Miami Community in collaboration with library staff.
           Current Libraries staff can learn more about the application process
-          and timelines here.
+          and timelines <a href="https://drive.google.com/file/d/1Bx2MRttOXgB7sG_5rLZwNwefkLl8c5ac/view?usp=drive_link">here</a>.
         </p>
       </div>
 
@@ -33,10 +34,12 @@ export default function Example() {
                   className="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto"
                 >
                   <span aria-hidden="true" className="absolute inset-0">
-                    <img
+                    <Image
                       src={grant.imageSrc}
                       alt={grant.name}
                       className="h-full w-full object-cover object-center"
+                      width={300}
+                      height={400}
                     />
                   </span>
                   <span
