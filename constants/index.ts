@@ -142,7 +142,7 @@ export const grants = [
 import { MenuProps } from '@/types'
 export const MENU_ITEMS: Array<MenuProps> = [
   {
-    title:'Inclusive Excellence At Miami University Libraries',
+    title:'Inclusive Excellence At MU Libraries',
     linkGroups: [
       {
         label: 'University Libraries Diversity Statement, Statement on Racism, and Land Acknowledgement',

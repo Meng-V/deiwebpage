@@ -67,7 +67,7 @@ function ScheduleTabbed() {
 function DaySummary({ day }: { day: MenuProps }) {
   return (
     <>
-      <h3 className="text-2xl font-semibold tracking-tight text-blue-900">
+      <h3 className="text-2xl font-semibold tracking-tight text-blue-900 h-24 xl:h-16 2xl:h-8">
         {day.title}
       </h3>
     </>

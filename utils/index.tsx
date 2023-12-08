@@ -5,7 +5,7 @@ import backgroundImage from "@/public/background.jpg";
 
 export function BackgroundImage({
   className,
-  position = "left",
+  position,
 }: {
   className?: string;
   position?: "left" | "right";
