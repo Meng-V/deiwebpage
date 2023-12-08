@@ -4,7 +4,6 @@ export const NAV_LINKS = [
   { href: '/', key: 'research_and_support', label: 'Research and Support' },
   { href: '/', key: 'use_the_librarie', label: 'Use the Libraries' },
   { href: '/', key: 'about', label: 'About' },
-  { href: '/video', key: 'video', label: 'Video' },
 ];
 
 // CAMP SECTION
@@ -13,83 +12,6 @@ export const PEOPLE_URL = [
   '/person-2.png',
   '/person-3.png',
   '/person-4.png',
-];
-
-// FEATURES SECTION
-export const Block_Menu = [
-  {
-    title: 'Inclusive Excellence at Miami University Libraries',
-    icon: '/map.svg',
-    variant: 'green',
-    menu_item: [
-      {
-        title: 'University Libraries Diversity Statement, Statement on Racism, and Land Acknowledgement',
-        link: '/',
-      },
-      {
-        title: 'DEI Committee',
-        link: '/',
-      },
-      {
-        title: 'Commitment to Inclusive Excellence',
-        link:'https://drive.google.com/file/d/1IxiHre74uvq01h4xuLa_PmKvGmTGmfn3/view',
-      },
-      {
-        title:'Diversity, Equity, and Inclusion FY23 Annual Report',
-        link:'https://drive.google.com/file/d/1GvV2cMRtTga9U5urkKVSkd0_QMEZNwuR/view?usp=sharing',
-      }
-    ]
-  },
-  {
-    title: 'Resources available for you',
-    icon: '/calendar.svg',
-    variant: 'yellow',
-    menu_item: [
-      {
-        title: 'DEI Textbooks on Reserve',
-        link: 'https://libguides.lib.miamioh.edu/reserves-textbooks/coursematerial',
-      },
-      {
-        title: 'Heath and Wellness Kits',
-        link: 'http://lib.miamioh.edu/2022-04-19-new-health-and-wellness-kits-for-checkout-funded-by-student-technology-fee',
-      },
-      {
-        title: 'DEI titles in the digital leisure reading collection',
-        link:'https://www.lib.miamioh.edu/2022-01-24-popular-e-books-and-audiobooks-now-available-for-leisure-reading-through-axis-360',
-      },
-      {
-        title:'Accessibility Resources',
-        link:'https://www.lib.miamioh.edu/research/instruction/accessibility/'
-      },
-      {
-        title:'Lived Experiences: Race at Miami University',
-        link:'https://livedmu.lib.miamioh.edu/'
-      },
-      {
-        title:'Finding Freedom Summer Traveling Exhibit',
-        link:'https://findingfreedom.lib.miamioh.edu/'
-      }
-    ]
-  },
-  {
-    title: 'Partnerships',
-    icon: '/tech.svg',
-    variant: 'gray',
-    menu_item: [
-      {
-        title: 'ACRL Diversity Alliance',
-        link: 'https://www.ala.org/acrl/issues/diversityalliance',
-      },
-      {
-        title: 'Butler Tech Project Search',
-        link: 'https://www.butlertech.org/transition-programs/project-search/',
-      },
-      {
-        title: 'OhioLINK Luminaries Program',
-        link:'https://www.ohiolink.edu/content/ohiolink_initiatives',
-      }
-    ]
-  },
 ];
 
 // FOOTER SECTION
@@ -215,3 +137,76 @@ export const grants = [
     imageSrc: UNIDOSImage,
   },
 ];
+
+
+import { MenuProps } from '@/types'
+export const MENU_ITEMS: Array<MenuProps> = [
+  {
+    title:'Inclusive Excellence At Miami University Libraries',
+    linkGroups: [
+      {
+        label: 'University Libraries Diversity Statement, Statement on Racism, and Land Acknowledgement',
+        link: '/',
+      },
+      {
+        label: 'DEI Committee',
+        link: '/',
+      },
+      {
+        label: 'Commitment to Inclusive Excellence',
+        link: '/',
+      },
+      {
+        label: 'Diversity, Equity, and Inclusion FY23 Annual Report',
+        link: '/',
+      },
+    ],
+  },
+  {
+    title:'Resources Available For You',
+    linkGroups: [
+      {
+        label: 'DEI Textbooks on Reserve',
+        link: '/',
+      },
+      {
+        label: 'Heath and Wellness Kits',
+        link: '/',
+      },
+      {
+        label: 'DEI titles in the digital leisure reading collection',
+        link: '/',
+      },
+      {
+        label: 'Accessibility Resources',
+        link: '/',
+      },
+      {
+        label: 'Lived Experiences: Race at Miami University',
+        link: '/',
+      },
+      {
+        label: 'Finding Freedom Summer Traveling Exhibit',
+        link: '/',
+      },
+    ],
+  },
+  {
+    title:'Partnerships',
+    linkGroups: [
+      {
+        label: 'ACRL Diversity Alliance',
+        link: 'https://www.ala.org/acrl/issues/diversityalliance',
+      },
+      {
+        label: 'Butler Tech Project Search',
+        link: 'https://www.butlertech.org/transition-programs/project-search/',
+      },
+      {
+        label: 'OhioLINK Luminaries Program',
+        link: 'https://www.ohiolink.edu/content/ohiolink_initiatives',
+      },
+    ],
+  },
+
+]

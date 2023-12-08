@@ -1,4 +1,3 @@
-import { PEOPLE_URL } from "@/constants";
 import Image from "next/image";
 
 interface CampProps {
@@ -33,7 +32,7 @@ const Hero = () => {
   return (
     <div
       className="2xl:max-container
-    relative flex flex-col py-10 lg:mb-10 lg:py-20 xl:mb-20"
+    relative flex flex-col py-10 lg:mb-10 lg:py-20"
     >
       <div
         className="flex h-[340px] w-full items-start justify-start 
@@ -63,27 +62,6 @@ const Hero = () => {
             We promote programs, events, displays, services and other activities
             and resources to enhance student, faculty, staff, and community
             awareness.
-          </p>
-          <Image
-            src="/quote.svg"
-            alt="camp-2"
-            width={186}
-            height={219}
-            className="camp-quote"
-          />
-        </div>
-      </div>
-
-      <div className="flexStart mt-10 md:mt-0 px-6 lg:-mt-64 lg:mr-6">
-        <div
-          className="bg-miami-red-gradient p-8 lg:max-w-[250px] xl:max-w-[450px] xl:rounded-5xl 
-        xl:px-16 xl:py-20 relative w-full overflow-hidden rounded-3xl"
-        >
-          <p className="regular-24 text-white">
-            <strong>Contact the Libraries’ DEI Committee at</strong>{" "}
-            <a href="mailto:dulb-DEIcontact@miamioh.edu">
-              dulb-DEIcontact@miamioh.edu
-            </a>
           </p>
           <Image
             src="/quote.svg"

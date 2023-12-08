@@ -1,55 +1,127 @@
-import { Block_Menu } from "@/constants";
-import Image from "next/image";
+"use client";
 
-const BlockMenu = () => {
+import { useEffect, useState, Fragment } from "react";
+import { Tab } from "@headlessui/react";
+import clsx from "clsx";
+
+import { BackgroundImage } from "@/utils";
+import { Container } from "@/utils";
+import { MenuProps } from "@/types";
+import { MENU_ITEMS } from "@/constants";
+
+function ScheduleTabbed() {
+  let [tabOrientation, setTabOrientation] = useState("horizontal");
+
+  useEffect(() => {
+    let smMediaQuery = window.matchMedia("(min-width: 640px)");
+
+    function onMediaQueryChange({ matches }: { matches: boolean }) {
+      setTabOrientation(matches ? "vertical" : "horizontal");
+    }
+
+    onMediaQueryChange(smMediaQuery);
+    smMediaQuery.addEventListener("change", onMediaQueryChange);
+
+    return () => {
+      smMediaQuery.removeEventListener("change", onMediaQueryChange);
+    };
+  }, []);
+
   return (
-    <section className="flex-col flexCenter overflow-hidden bg-feature-bg bg-center bg-no-repeat py-24">
-      <h2 className="sr-only">Menu and Links</h2>
-      <div className="max-container padding-container relative w-full flex justify-items-end block-menu">
-        <div className="z-20 flex w-full flex-col">
-          <div className="mt-8 grid gap-10 md:grid-cols-3 lg:mt-10 lg:gap-20">
-            {Block_Menu.map((menu) => (
-              <MenuItem
-                title={menu.title}
-                key={menu.title}
-                icon={menu.icon}
-                variant={menu.variant}
-                menu_item={menu.menu_item}
-              />
+    <Tab.Group
+      as="div"
+      className="mx-auto grid max-w-2xl grid-cols-1 gap-y-6 sm:grid-cols-2 lg:hidden"
+      vertical={tabOrientation === "vertical"}
+    >
+      <Tab.List className="-mx-4 flex gap-x-4 gap-y-10 overflow-x-auto pb-4 pl-4 sm:mx-0 sm:flex-col sm:pb-0 sm:pl-0 sm:pr-8">
+        {({ selectedIndex }) => (
+          <>
+            {MENU_ITEMS.map((item, itemIndex) => (
+              <div
+                key={item.title}
+                className={clsx(
+                  "relative w-3/4 flex-none pr-4 sm:w-auto sm:pr-0",
+                  itemIndex !== selectedIndex && "opacity-70"
+                )}
+              >
+                {item.title}
+              </div>
             ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-type MenuItem = {
-  title: string;
-  icon: string;
-  variant: string;
-  menu_item: {
-    title: string;
-    link: string;
-  }[];
-};
-const MenuItem = ({ title, icon, variant, menu_item }: MenuItem) => {
-  return (
-    <div className="flex w-full flex-1 flex-col items-start">
-      <div className={`rounded-full padding-4 lg:p-7 bg-${variant}-50`}>
-        <Image src={icon} alt="map" width={28} height={28} />
-      </div>
-      <h3 className="bold-20 lg:bold-32 mt-5 capitalize">{title}</h3>
-      <ul className="regular-16 mt-5 text-white lg:mt-[30px] lg:bg-none">
-        {menu_item.map((item, index) => (
-          <li
-            key={index}
-            className="regular-16 mt-5 text-white lg:mt-[30px] lg:bg-none"
+          </>
+        )}
+      </Tab.List>
+      <Tab.Panels>
+        {MENU_ITEMS.map((item) => (
+          <Tab.Panel
+            key={item.title}
+            className="ui-not-focus-visible:outline-none"
           >
-            <a href={item.link} target="_blank">{item.title}</a>
-          </li>
+            <TimeSlots day={item} />
+          </Tab.Panel>
         ))}
-      </ul>
+      </Tab.Panels>
+    </Tab.Group>
+  );
+}
+
+function DaySummary({ day }: { day: MenuProps }) {
+  return (
+    <>
+      <h3 className="text-2xl font-semibold tracking-tight text-blue-900">
+        {day.title}
+      </h3>
+    </>
+  );
+}
+
+function TimeSlots({ day, className }: { day: MenuProps; className?: string }) {
+  return (
+    <ol
+      role="list"
+      className={clsx(
+        className,
+        "space-y-4 bg-white/60 px-10 py-14 text-center shadow-xl shadow-blue-900/5 backdrop-blur"
+      )}
+    >
+      {day.linkGroups.map((timeSlot, timeSlotIndex) => (
+        <li key={timeSlotIndex}>
+          {timeSlotIndex > 0 && (
+            <div className="mx-auto mb-8 h-px w-48 bg-indigo-500/10" />
+          )}
+          <a href={timeSlot.link ?? undefined}>
+            <h4 className="text-lg font-semibold tracking-tight text-blue-900">
+              {timeSlot.label}
+            </h4>
+          </a>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
+function ScheduleStatic() {
+  return (
+    <div className="hidden lg:grid lg:grid-cols-3 lg:gap-x-8 items-start">
+      {MENU_ITEMS.map((item) => (
+        <section key={item.title}>
+          <DaySummary day={item} />
+          <TimeSlots day={item} className="mt-10" />
+        </section>
+      ))}
     </div>
   );
-};
-export default BlockMenu;
+}
+
+export function BlockMenu() {
+  return (
+    <>
+      <div className="relative mt-14 sm:mt-24">
+        <BackgroundImage position="right" />
+        <Container className="relative">
+          <ScheduleTabbed />
+          <ScheduleStatic />
+        </Container>
+      </div>
+    </>
+  );
+}
