@@ -6,7 +6,7 @@ const Heritage = () => {
     <section>
       <h2>Heritage Programming</h2>
       <div className="get-app">
-        <div className="z-20 flex w-full flex-1 flex-col items-start justify-center gap-12">
+        <div className="flex w-full flex-1 flex-col items-start justify-center gap-12">
           <p className="regular-16">
             Miami University Libraries has joined the Office of Institutional
             Diversity & Inclusion in celebrating history and heritage weeks,

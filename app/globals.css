@@ -15,7 +15,7 @@ body {
 }
 
 section {
-  @apply relative flexCenter w-full flex-col pb-[100px];
+  @apply relative flexCenter w-full flex-col max-container px-6 py-12 lg:px-24 lg:py-16;
 }
 
 a {
@@ -40,7 +40,7 @@ h2{
     @apply  border-white bg-white px-8 py-3 text-green-50
   }
   .btn_white_no_left_padding { 
-    @apply  border-white bg-white pr-8 py-3 text-green-50
+    @apply  border-white bg-white pr-8 py-3 text-red-500
   }
   .btn_white_text  { 
     @apply  border-white bg-white px-8 py-3 text-gray-90
@@ -165,9 +165,8 @@ h2{
 
   /* Get App */
   .get-app {
-    @apply max-container relative flex w-full flex-col justify-between gap-32 overflow-hidden bg-cover bg-center bg-no-repeat px-6 py-12 sm:flex-row sm:gap-12 lg:px-20 xl:max-h-[598px] 2xl:rounded-5xl;
+    @apply max-container relative flex w-full flex-col justify-between gap-32 overflow-hidden bg-cover bg-center bg-no-repeat py-12 sm:flex-row sm:gap-12 xl:max-h-[598px] 2xl:rounded-5xl;
   }
-
   /* block menu */
   .block-menu {
     @apply max-container relative flex w-full  flex-col justify-between gap-32 overflow-hidden bg-green-90 bg-pattern bg-cover bg-center bg-no-repeat px-6 py-8 text-white sm:flex-row sm:gap-12 sm:py-12 lg:px-20 xl:max-h-[798px] 2xl:rounded-5xl;

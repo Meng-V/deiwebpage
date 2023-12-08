@@ -52,18 +52,11 @@ const Luminaries = () => {
   }, []);
 
   return (
-    <section
-      id="speakers"
-      aria-labelledby="speakers-title"
-      className="py-10 sm:py-12"
-    >
+    <section className="section-container">
       <ImageClipPaths id={id} />
-      <Container>
         <div className="mx-auto">
-          <h2>
-            OhioLINK Luminaries Program
-          </h2>
-          <div className="mt-4 mx-8">
+          <h2>OhioLINK Luminaries Program</h2>
+          <div className="mt-4">
             <p>
               The Luminaries program is an effort coordinated by OhioLINK,
               Ohio’s statewide academic library consortium, that aims to
@@ -131,9 +124,7 @@ const Luminaries = () => {
                             {day.name}
                           </Tab>
                         </div>
-                        <div
-                          className="mt-1.5 block text-2xl font-semibold tracking-tight text-blue-900 text-wrap-balance"
-                        >
+                        <div className="mt-1.5 block text-2xl font-semibold tracking-tight text-blue-900 text-wrap-balance">
                           {day.date}
                         </div>
                       </div>
@@ -146,7 +137,7 @@ const Luminaries = () => {
           <Tab.Panels className="lg:col-span-3">
             {days.map((day) => (
               <Tab.Panel
-                key={day.dateTime}
+                key={day.date}
                 className="grid grid-cols-1 gap-x-8 gap-y-10 ui-not-focus-visible:outline-none sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3"
                 unmount={false}
               >
@@ -188,7 +179,6 @@ const Luminaries = () => {
             ))}
           </Tab.Panels>
         </Tab.Group>
-      </Container>
     </section>
   );
 };

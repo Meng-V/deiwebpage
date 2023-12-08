@@ -8,13 +8,22 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <section className="bg-white">
-      <div className="px-4">
+    <section className="bg-white section-container">
+      <div>
         <h2>DEI Grants Program</h2>
+        <p className="mt-4 mx-8">
+          The Diversity, Equity, and Inclusion (DEI) Grant Program is an
+          opportunity for the Miami University Libraries community to seek funds
+          up to $1500 for DEI-focused ideas and projects that are not regularly
+          funded through departmental budgets. We welcome grant ideas from all
+          members of the Miami Community in collaboration with library staff.
+          Current Libraries staff can learn more about the application process
+          and timelines here.
+        </p>
       </div>
 
       <div className="mt-4 flow-root">
-        <div className="-my-2">
+        <div className="my-2">
           <div className="relative box-content h-80 overflow-x-auto py-2 xl:overflow-visible">
             <div className="absolute flex space-x-8 px-4 sm:px-6 lg:px-8 xl:relative xl:grid xl:grid-cols-5 xl:gap-x-8 xl:space-x-0 xl:px-0">
               {grants.map((grant) => (
@@ -42,16 +51,6 @@ export default function Example() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="mt-6 px-4 sm:hidden">
-        <a
-          href="#"
-          className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500"
-        >
-          Browse All DEI Grants
-          <span aria-hidden="true"> &rarr;</span>
-        </a>
       </div>
     </section>
   );
