@@ -19,7 +19,7 @@ section {
 }
 
 a {
-  color: #AD102A;
+  @apply text-miami_accent_red;
 }
 
 p{
@@ -58,7 +58,7 @@ h2{
     @apply  border-white bg-white px-8 py-3 text-green-50
   }
   .btn_white_no_left_padding { 
-    @apply  border-white bg-white pr-8 py-3 text-red-500
+    @apply  border-white bg-white pr-8 py-3 text-miami_red
   }
   .btn_white_text  { 
     @apply  border-white bg-white px-8 py-3 text-gray-90
@@ -70,7 +70,7 @@ h2{
     @apply  bg-green-90 px-8 py-4 text-white transition-all hover:bg-black
   }
   .btn_dark_green_outline  { 
-    @apply border-gray-20 bg-green-90 px-8 py-5 text-white
+    @apply border-gray-50 bg-miami_accent_red px-8 py-5 text-white
   }
   
   .max-container {
