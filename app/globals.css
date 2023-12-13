@@ -183,7 +183,7 @@ h2{
 
   /* Get App */
   .get-app {
-    @apply max-container relative flex w-full flex-col justify-between gap-32 overflow-hidden bg-cover bg-center bg-no-repeat py-12 sm:flex-row sm:gap-12 xl:max-h-[598px] 2xl:rounded-5xl;
+    @apply max-container relative flex w-full flex-col justify-between gap-32 overflow-hidden bg-cover bg-center bg-no-repeat py-12 sm:flex-row sm:gap-12 xl:max-h-[598px];
   }
   /* block menu */
   .block-menu {
