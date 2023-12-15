@@ -9,15 +9,17 @@ function MonthlyPrograms() {
     <div className="flex flex-1 items-start justify-center">
       <ul
         role="list"
-        className="grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8 w-full"
+        className="grid grid-cols-2 gap-x-4 gap-y-4 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8 w-full"
       >
         {HERITAGE_ITEMS.map((file) => (
           <li key={file.title} className="relative">
             <div className="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
-              <img
+              <Image
                 src={file.img_source}
                 alt={file.title}
-                className="pointer-events-none object-cover group-hover:opacity-75"
+                className="pointer-events-none object-cover group-hover:opacity-75 group-hover:scale-110 ease-in duration-75"
+                width={200}
+                height={100}
               />
               <a href={file.link}>
               <button
@@ -27,7 +29,7 @@ function MonthlyPrograms() {
               <span className="sr-only">View details for {file.title}</span>
               </a>
             </div>
-              <p className="pointer-events-none mt-2 block text-sm font-medium text-gray-900">{file.title}</p>
+              <p className="pointer-events-none mt-2 block text-sm font-medium text-orange-600">{file.title}</p>
           </li>
         ))}
       </ul>
