@@ -9,10 +9,10 @@ import Image from "next/image";
 
 export default function Example() {
   return (
-    <section className="bg-white section-container">
+    <section className="section-container">
       <div>
         <h2>DEI Grants Program</h2>
-        <p className="mt-4 mx-8">
+        <p className="mt-4">
           The Diversity, Equity, and Inclusion (DEI) Grant Program is an
           opportunity for the Miami University Libraries community to seek funds
           up to $1500 for DEI-focused ideas and projects that are not regularly
@@ -25,8 +25,10 @@ export default function Example() {
 
       <div className="mt-4 flow-root">
         <div className="my-2">
-          <div className="relative box-content overflow-x-auto py-2 xl:overflow-visible">
-            <div className="grid grid-cols-2 gap-8 px-4 sm:px-6 lg:px-8 xl:grid xl:grid-cols-5 xl:gap-x-8 xl:space-x-0 xl:px-0">
+          <div className="relative box-content overflow-x-auto py-2 overflow-visible">
+            <div className="
+            grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5
+            gap-8 px-4 sm:px-6 lg:px-8 xl:gap-x-8 xl:space-x-0 xl:px-0">
               {GRANTS.map((grant) => (
                 <a
                   key={grant.name}

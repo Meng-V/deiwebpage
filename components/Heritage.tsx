@@ -9,7 +9,9 @@ function MonthlyPrograms() {
     <div className="flex flex-1 items-start justify-center">
       <ul
         role="list"
-        className="grid grid-cols-2 gap-x-4 gap-y-4 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8 w-full"
+        className="
+        grid grid-cols-2 md:grid-cols-3 xl:gap-x-8
+        gap-4 sm:gap-x-6  w-full"
       >
         {HERITAGE_ITEMS.map((file) => (
           <li key={file.title} className="relative">
@@ -22,14 +24,16 @@ function MonthlyPrograms() {
                 height={100}
               />
               <a href={file.link}>
-              <button
-                type="button"
-                className="absolute inset-0 focus:outline-none">
-              </button>
-              <span className="sr-only">View details for {file.title}</span>
+                <button
+                  type="button"
+                  className="absolute inset-0 focus:outline-none"
+                ></button>
+                <span className="sr-only">View details for {file.title}</span>
               </a>
             </div>
-              <p className="pointer-events-none mt-2 block text-sm font-medium text-orange-600">{file.title}</p>
+            <p className="pointer-events-none mt-2 block text-sm font-medium text-orange-600">
+              {file.title}
+            </p>
           </li>
         ))}
       </ul>
@@ -41,8 +45,10 @@ const Heritage = () => {
   return (
     <section>
       <h2>Heritage Program</h2>
-      <div className="max-container relative flex w-full flex-col justify-between gap-32 overflow-hidden bg-cover bg-center bg-no-repeat py-12 md:flex-row sm:gap-12">
-        <div className="flex w-full flex-1 flex-col items-start self-baseline justify-center gap-8 xl:w-8">
+      <div
+        className="max-container relative w-full flex flex-col py-12 lg:flex-row gap-12"
+      >
+        <div className="flex w-full flex-1 flex-col items-start self-baseline justify-center gap-4 lg:gap-8">
           <span>
             Miami University Libraries has joined the{" "}
             <a
