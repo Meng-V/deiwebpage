@@ -180,6 +180,7 @@ import ArabAmericanImage from "@/public/Heritage/ArabAmerican.jpg";
 import BlackHistoryImage from "@/public/Heritage/BlackHistoryMonth.jpg";
 import DEIMiddleTownImage from "@/public/Heritage/DEIMiddletown.jpg";
 import DeafHistoryMonthImage from "@/public/Heritage/DeafHistoryMonth.png";
+import DisabilityMonthImage from "@/public/Heritage/DisabilityMonth.png";
 import HispanicImage from "@/public/Heritage/Hispanic.jpg";
 import HispanicHeritageImage from "@/public/Heritage/HispanicHeritage.jpg";
 import PrideMiddletownImage from "@/public/Heritage/PrideMiddletown.jpg";
@@ -216,7 +217,7 @@ export const HERITAGE_ITEMS = [
   {
     title: "Disability Identity and Culture Month Resources",
     link: "https://libguides.lib.miamioh.edu/disability",
-    img_source: DEIMiddleTownImage,
+    img_source: DisabilityMonthImage,
   },
   {
     title: "Hispanic Heritage Month",
