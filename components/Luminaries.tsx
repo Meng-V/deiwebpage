@@ -169,7 +169,11 @@ const Luminaries = () => {
                     {person.name}
                   </h3>
                   <p className="mt-1 text-base tracking-tight text-slate-500">
-                    {person.major}
+                    <span>{person.major}</span>
+                    <br />
+                    <span className="text-slate-400 text-sm">
+                      {person.year}
+                    </span>
                   </p>
                 </div>
               ))}

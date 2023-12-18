@@ -33,30 +33,45 @@ function ScheduleTabbed() {
       className="mx-auto grid max-w-2xl grid-cols-1 gap-y-6 sm:grid-cols-2 lg:hidden"
       vertical={tabOrientation === "vertical"}
     >
-      <Tab.List className="-mx-4 flex gap-x-4 gap-y-10 overflow-x-auto pb-4 pl-4 sm:mx-0 sm:flex-col sm:pb-0 sm:pl-0 sm:pr-8">
+      <Tab.List
+        className="
+      flex gap-x-0
+      gap-y-10 overflow-x-auto pb-4 pl-4 
+      sm:flex-col sm:gap-x-4 sm:pb-0 sm:pl-0 sm:pr-8"
+      >
         {({ selectedIndex }) => (
           <>
-            {MENU_ITEMS.map((item, itemIndex) => (
+            {MENU_ITEMS.map((day, dayIndex) => (
               <div
-                key={item.title}
+                key={dayIndex}
                 className={clsx(
-                  "relative w-3/4 flex-none pr-4 sm:w-auto sm:pr-0",
-                  itemIndex !== selectedIndex && "opacity-70"
+                  "relative w-1/3 flex-none px-3 sm:w-auto sm:pr-0",
+                  dayIndex !== selectedIndex && "opacity-70"
                 )}
               >
-                {item.title}
+                <DaySummary
+                  day={{
+                    ...day,
+                    title: (
+                      <Tab className="ui-not-focus-visible:outline-none">
+                        <span className="absolute inset-0" />
+                        {day.title}
+                      </Tab>
+                    ),
+                  }}
+                />
               </div>
             ))}
           </>
         )}
       </Tab.List>
       <Tab.Panels>
-        {MENU_ITEMS.map((item) => (
+        {MENU_ITEMS.map((day, dayIndex) => (
           <Tab.Panel
-            key={item.title}
+            key={dayIndex}
             className="ui-not-focus-visible:outline-none"
           >
-            <TimeSlots day={item} />
+            <TimeSlots day={day} />
           </Tab.Panel>
         ))}
       </Tab.Panels>
@@ -67,7 +82,12 @@ function ScheduleTabbed() {
 function DaySummary({ day }: { day: MenuProps }) {
   return (
     <>
-      <h3 className="text-2xl font-semibold tracking-tight text-blue-900 h-24 xl:h-16 2xl:h-8">
+      <h3
+        className="
+      text-center text-lg font-semibold lg:text-2xl 
+      tracking-tight text-blue-900 
+      h-10 2xl:h-8"
+      >
         {day.title}
       </h3>
     </>
@@ -84,15 +104,11 @@ function TimeSlots({ day, className }: { day: MenuProps; className?: string }) {
       )}
     >
       {day.linkGroups.map((timeSlot, timeSlotIndex) => (
-        <li key={timeSlotIndex}>
+        <li key={timeSlot.label} aria-label={`${timeSlot.label}`}>
           {timeSlotIndex > 0 && (
             <div className="mx-auto mb-8 h-px w-48 bg-indigo-500/10" />
           )}
-          <a href={timeSlot.link ?? undefined}>
-            <h4 className="text-lg font-semibold tracking-tight text-blue-900">
-              {timeSlot.label}
-            </h4>
-          </a>
+          <h4 className="text-blue-900 tracking-tight">{timeSlot.label}</h4>
         </li>
       ))}
     </ol>
@@ -102,11 +118,11 @@ function TimeSlots({ day, className }: { day: MenuProps; className?: string }) {
 function ScheduleStatic() {
   return (
     <div className="hidden lg:grid lg:grid-cols-3 lg:gap-x-8 items-start">
-      {MENU_ITEMS.map((item) => (
-        <section key={item.title}>
-          <DaySummary day={item} />
-          <TimeSlots day={item} className="mt-10" />
-        </section>
+      {MENU_ITEMS.map((day, dayIndex) => (
+        <div key={dayIndex}>
+          <DaySummary day={day} />
+          <TimeSlots day={day} className="mt-10" />
+        </div>
       ))}
     </div>
   );
@@ -114,14 +130,12 @@ function ScheduleStatic() {
 
 export function BlockMenu() {
   return (
-    <>
-      <div className="relative mt-14 sm:mt-24">
-        <BackgroundImage position="right" />
+      <div className="relative my-14 sm:mt-24">
+        <BackgroundImage position="right" className="-bottom-32 -top-40" />
         <Container className="relative">
           <ScheduleTabbed />
           <ScheduleStatic />
         </Container>
       </div>
-    </>
   );
 }

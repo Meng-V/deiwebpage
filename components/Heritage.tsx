@@ -43,7 +43,7 @@ function MonthlyPrograms() {
 
 const Heritage = () => {
   return (
-    <section>
+    <section className="section-container">
       <h2>Heritage Program</h2>
       <div
         className="max-container relative w-full flex flex-col py-12 lg:flex-row gap-12"

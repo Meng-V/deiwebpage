@@ -18,7 +18,7 @@ export const PEOPLE_URL = [
 import { MenuProps } from "@/types";
 export const MENU_ITEMS: Array<MenuProps> = [
   {
-    title: "Inclusive Excellence At MU Libraries",
+    title: "Inclusive Excellence",
     linkGroups: [
       {
         label:
@@ -40,7 +40,7 @@ export const MENU_ITEMS: Array<MenuProps> = [
     ],
   },
   {
-    title: "Resources Available For You",
+    title: "Resources Available",
     linkGroups: [
       {
         label: "DEI Textbooks on Reserve",
@@ -102,6 +102,7 @@ export const LUMSTUDENTS = [
         name: "Marlow Zuch",
         major: "History major",
         image: MarlowZuchImage,
+        year: "Class of ‘26",
       },
     ],
   },
@@ -113,11 +114,13 @@ export const LUMSTUDENTS = [
         name: "Romero Pearson",
         major: "Software Engineering major",
         image: RomeroPearsonImage,
+        year: "Class of ‘24",
       },
       {
         name: "Hal Howard",
         major: "Computer Science major",
         image: HalHowardImage,
+        year: "Class of ‘23",
       },
     ],
   },
@@ -129,11 +132,13 @@ export const LUMSTUDENTS = [
         name: "Hal Howard",
         major: "Computer Science major",
         image: HalHowardImage,
+        year: "Class of ‘23",
       },
       {
         name: "Ashley Sankey",
         major: "History major",
         image: AshleySankeyImage,
+        year: "Class of ‘22",
       },
     ],
   },

@@ -7,7 +7,7 @@ export type ButtonProps = {
   };
   
 export interface MenuProps {
-    title: string
+    title: React.ReactNode
     linkGroups: Array<{
       label: string
       link: string | null
