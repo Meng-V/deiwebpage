@@ -108,7 +108,9 @@ function TimeSlots({ day, className }: { day: MenuProps; className?: string }) {
           {timeSlotIndex > 0 && (
             <div className="mx-auto mb-8 h-px w-48 bg-indigo-500/10" />
           )}
-          <h4 className="text-blue-900 tracking-tight">{timeSlot.label}</h4>
+          <h4 className="text-blue-900 tracking-tight">
+            <a href={`${timeSlot.link}`} target="_blank">{timeSlot.label}</a>
+          </h4>
         </li>
       ))}
     </ol>
@@ -130,12 +132,12 @@ function ScheduleStatic() {
 
 export function BlockMenu() {
   return (
-      <div className="relative my-14 sm:mt-24">
-        <BackgroundImage position="right" className="-bottom-32 -top-40" />
-        <Container className="relative">
-          <ScheduleTabbed />
-          <ScheduleStatic />
-        </Container>
-      </div>
+    <div className="relative my-14 sm:mt-24">
+      <BackgroundImage position="right" className="-bottom-32 -top-40" />
+      <Container className="relative">
+        <ScheduleTabbed />
+        <ScheduleStatic />
+      </Container>
+    </div>
   );
 }

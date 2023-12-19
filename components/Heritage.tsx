@@ -23,7 +23,7 @@ function MonthlyPrograms() {
                 width={200}
                 height={100}
               />
-              <a href={file.link}>
+              <a href={file.link} target="_blank">
                 <button
                   type="button"
                   className="absolute inset-0 focus:outline-none"
@@ -45,9 +45,7 @@ const Heritage = () => {
   return (
     <section className="section-container">
       <h2>Heritage Program</h2>
-      <div
-        className="max-container relative w-full flex flex-col py-12 lg:flex-row gap-12"
-      >
+      <div className="max-container relative w-full flex flex-col py-12 lg:flex-row gap-12">
         <div className="flex w-full flex-1 flex-col items-start self-baseline justify-center gap-4 lg:gap-8">
           <span>
             Miami University Libraries has joined the{" "}
@@ -80,14 +78,14 @@ const Heritage = () => {
           </span>
 
           <div className="flex items-start justify-start w-full flex-col gap-3 whitespace-nowrap">
-            <a href="https://www.miamioh.edu/diversity-inclusion/index.html">
+            <a href="https://www.miamioh.edu/diversity-inclusion/index.html" target="_blank">
               <Button
                 type="button"
                 title="Office of Transformational and Inclusive Excellence"
                 variant="btn_white_no_left_padding"
               />
             </a>
-            <a href="https://www.miamioh.edu/diversity-inclusion/programs-resources/history-heritage-months/">
+            <a href="https://www.miamioh.edu/diversity-inclusion/programs-resources/history-heritage-months/" target="_blank">
               <Button
                 type="button"
                 title="More information"

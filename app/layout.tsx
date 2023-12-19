@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "DEI Webpage",
@@ -16,10 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <base target="_blank" />
-      </Head>
-      <body>
+      <body suppressHydrationWarning={true}>
         <main className="relative overflow-hidden">{children}</main>
       </body>
     </html>

@@ -31,11 +31,11 @@ export const MENU_ITEMS: Array<MenuProps> = [
       },
       {
         label: "Commitment to Inclusive Excellence",
-        link: "/",
+        link: "https://drive.google.com/file/d/1IxiHre74uvq01h4xuLa_PmKvGmTGmfn3/view",
       },
       {
         label: "Diversity, Equity, and Inclusion FY23 Annual Report",
-        link: "/",
+        link: "https://drive.google.com/file/d/1GvV2cMRtTga9U5urkKVSkd0_QMEZNwuR/view?usp=sharing",
       },
     ],
   },
@@ -44,27 +44,31 @@ export const MENU_ITEMS: Array<MenuProps> = [
     linkGroups: [
       {
         label: "DEI Textbooks on Reserve",
-        link: "/",
+        link: "https://libguides.lib.miamioh.edu/reserves-textbooks/coursematerial",
       },
       {
         label: "Heath and Wellness Kits",
-        link: "/",
+        link: "http://lib.miamioh.edu/2022-04-19-new-health-and-wellness-kits-for-checkout-funded-by-student-technology-fee",
       },
       {
         label: "DEI titles in the digital leisure reading collection",
-        link: "/",
+        link: "https://www.lib.miamioh.edu/2022-01-24-popular-e-books-and-audiobooks-now-available-for-leisure-reading-through-axis-360",
       },
       {
         label: "Accessibility Resources",
-        link: "/",
+        link: "https://www.lib.miamioh.edu/research/instruction/accessibility/",
+      },
+      {
+        label: "Antiracist Resources",
+        link: "https://libguides.lib.miamioh.edu/antiracist-resources",
       },
       {
         label: "Lived Experiences: Race at Miami University",
-        link: "/",
+        link: "https://livedmu.lib.miamioh.edu/",
       },
       {
         label: "Finding Freedom Summer Traveling Exhibit",
-        link: "/",
+        link: "https://findingfreedom.lib.miamioh.edu/",
       },
     ],
   },

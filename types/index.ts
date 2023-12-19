@@ -10,6 +10,6 @@ export interface MenuProps {
     title: React.ReactNode
     linkGroups: Array<{
       label: string
-      link: string | null
+      link?: string | null
     }>
   }
