@@ -1,6 +1,6 @@
 "use client";
 
-import { GRANTS } from "@/constants";
+import { deigrants } from "@/constants/deigrants";
 import Image from "next/image";
 
 // function classNames(...classes) {
@@ -29,7 +29,7 @@ export default function Example() {
             <div className="
             grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5
             gap-8 px-4 sm:px-6 lg:px-8 xl:gap-x-8 xl:space-x-0 xl:px-0">
-              {GRANTS.map((grant) => (
+              {deigrants.map((grant) => (
                 <a
                   key={grant.name}
                   href={grant.href}

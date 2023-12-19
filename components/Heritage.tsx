@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Button from "@/utils";
-import { HERITAGE_ITEMS } from "@/constants";
+import { heritage } from "@/constants/heritage";
 
 function MonthlyPrograms() {
   return (
@@ -13,7 +13,7 @@ function MonthlyPrograms() {
         grid grid-cols-2 md:grid-cols-3 xl:gap-x-8
         gap-4 sm:gap-x-6  w-full"
       >
-        {HERITAGE_ITEMS.map((file) => (
+        {heritage.map((file) => (
           <li key={file.title} className="relative">
             <div className="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
               <Image
