@@ -133,7 +133,7 @@ function ScheduleStatic() {
 export function BlockMenu() {
   return (
     <div className="relative my-14 sm:mt-24">
-      <BackgroundImage position="right" className="-bottom-32 -top-40" />
+      <BackgroundImage position="right" />
       <Container className="relative">
         <ScheduleTabbed />
         <ScheduleStatic />
