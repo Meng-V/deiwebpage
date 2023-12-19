@@ -8,7 +8,7 @@ import clsx from "clsx";
 
 import { DiamondIcon } from "@/utils";
 
-import { LUMSTUDENTS } from "@/constants";
+import { luminaries } from "@/constants/luminaries";
 
 function ImageClipPaths({
   id,
@@ -98,7 +98,7 @@ const Luminaries = () => {
           <Tab.List className="grid auto-cols-auto grid-flow-col justify-start gap-x-8 gap-y-10 whitespace-nowrap px-4 sm:mx-auto sm:max-w-2xl sm:grid-cols-3 sm:px-0 sm:text-center lg:grid-flow-row lg:grid-cols-1 lg:text-left">
             {({ selectedIndex }) => (
               <>
-                {LUMSTUDENTS.map((lum, lumIndex) => (
+                {luminaries.map((lum, lumIndex) => (
                   <div key={lumIndex} className="relative lg:pl-8">
                     <DiamondIcon
                       className={clsx(
@@ -133,10 +133,10 @@ const Luminaries = () => {
           </Tab.List>
         </div>
         <Tab.Panels className="lg:col-span-3">
-          {LUMSTUDENTS.map((lum) => (
+          {luminaries.map((lum) => (
             <Tab.Panel
               key={lum.name}
-              className="grid grid-cols-1 gap-x-8 gap-y-10 ui-not-focus-visible:outline-none sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3"
+              className="grid grid-cols-1 gap-x-8 gap-y-10 ui-not-focus-visible:outline-none sm:grid-cols-2 sm:gap-y-16"
               unmount={false}
             >
               {lum.display.map((person, personIndex) => (
