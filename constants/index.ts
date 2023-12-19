@@ -27,7 +27,7 @@ export const MENU_ITEMS: Array<MenuProps> = [
       },
       {
         label: "DEI Committee",
-        link: "/",
+        link: "/deicommittee",
       },
       {
         label: "Commitment to Inclusive Excellence",
