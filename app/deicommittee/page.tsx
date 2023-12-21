@@ -7,19 +7,19 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { team } from '@/constants/team'
 
 
-
 function Team() {
   return (
     <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <h2>Miami University Libraries' Diversity, Equity, and Inclusion Committee</h2>
       <div className="space-y-24">
         {team.map((group) => (
           <FadeInStagger key={group.title}>
             <Border as={FadeIn} />
             <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-4 xl:gap-8">
               <FadeIn>
-                <h2 className="font-display text-2xl font-semibold text-neutral-950">
+                <h3 className="font-display text-2xl font-semibold text-neutral-950">
                   {group.title}
-                </h2>
+                </h3>
               </FadeIn>
               <div className="lg:col-span-3">
                 <ul
@@ -33,11 +33,15 @@ function Team() {
                           <Image
                             alt=""
                             {...person.image}
-                            className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
+                            className="h-96 w-full object-cover transition duration-500 motion-safe:group-hover:scale-105"
+                            width={100} height={200}
                           />
                           <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
                             <p className="font-display text-base/6 font-semibold tracking-wide text-white">
-                              {person.name}
+                              {person.name} 
+                            </p>
+                            <p className='text-sm text-white'>
+                            ({person.pron})
                             </p>
                             <p className="mt-2 text-sm text-white">
                               {person.role}
@@ -70,14 +74,9 @@ import { SectionIntro } from '@/components/SectionIntro'
 import { GridList, GridListItem } from '@/components/GridList'
 
 const clients = [
-  ['Phobia', logoPhobia],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+  ['FY21 Annual Report', logoPhobia],
+  ['FY22 Annual Report', logoFamilyFund],
+  ['FY23 Annual Report', logoUnseal],
 ]
 
 
@@ -85,8 +84,8 @@ function Clients() {
   return (
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <FadeIn>
-        <h2 className="font-display text-2xl font-semibold text-neutral-950">
-        Current and Previous Annual Reports
+        <h2>
+        Committee Information
         </h2>
       </FadeIn>
       <FadeInStagger className="mt-10" faster>
@@ -123,22 +122,6 @@ function Culture() {
           We are a group of like-minded people who share the same core values.
         </p>
       </SectionIntro>
-      <Container className="mt-16">
-        <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
-          </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
-          </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
-          </GridListItem>
-        </GridList>
-      </Container>
     </div>
   )
 }
@@ -149,7 +132,6 @@ export default async function About() {
     <>
       <Team />
       <Clients />
-      <Culture />
     </>
   )
 }

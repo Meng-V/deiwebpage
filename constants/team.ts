@@ -1,85 +1,132 @@
-import imageAngelaFisher from '@/public/team/angela-fisher.jpg'
-import imageBenjaminRussel from '@/public/team/benjamin-russel.jpg'
-import imageBlakeReid from '@/public/team/blake-reid.jpg'
-import imageChelseaHagon from '@/public/team/chelsea-hagon.jpg'
-import imageDriesVincent from '@/public/team/dries-vincent.jpg'
-import imageEmmaDorsey from '@/public/team/emma-dorsey.jpg'
-import imageJeffreyWebb from '@/public/team/jeffrey-webb.jpg'
-import imageKathrynMurphy from '@/public/team/kathryn-murphy.jpg'
-import imageLeonardKrasner from '@/public/team/leonard-krasner.jpg'
-import imageLeslieAlexander from '@/public/team/leslie-alexander.jpg'
-import imageMichaelFoster from '@/public/team/michael-foster.jpg'
-import imageWhitneyFrancis from '@/public/team/whitney-francis.jpg'
-
 export const team = [
     {
       title: 'Current Members',
       people: [
         {
-          name: 'Leslie Alexander',
-          role: 'Co-Founder / CEO',
-          image: { src: imageLeslieAlexander },
+          name: 'Jerome Conley',
+          role: 'Sponsor',
+          pron: "he/him/his",
+          image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/Conley-Jerome.jpg" },
         },
         {
-          name: 'Michael Foster',
-          role: 'Co-Founder / CTO',
-          image: { src: imageMichaelFoster },
+          name: 'Krista McDonald',
+          role: 'Chair',
+          pron: "she/her/hers",
+          image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/McDonald-Krista.jpg" },
         },
         {
-          name: 'Dries Vincent',
-          role: 'Partner & Business Relations',
-          image: { src: imageDriesVincent },
+          name: 'Laura Birkenhauer',
+          role: 'Member',
+          pron: "she/her/hers",
+          image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/Birkenhauer-Laura.jpg" },
+        },
+        {
+          name: "Mark Dahlquist",
+          role: 'Member',
+          pron: "he/him/his",
+          image: {src: "https://lib.miamioh.edu/images/staff-photos/large_size/Dahlquist-Mark.jpg" }
+        },
+        {
+          name: "Autumn Griffie",
+          role: "Member",
+          pron: "she/her/hers",
+          image: {src: "https://lib.miamioh.edu/images/staff-photos/user-placeholder.png" }
+        },
+        {
+          name: "Jennifer Hicks",
+          role: "Member",
+          pron: "she/her/hers",
+          image: {src: "https://lib.miamioh.edu/images/staff-photos/large_size/Hicks-Jennifer.jpg"}
+        },
+        {
+          name: "Rachel Makarowski",
+          role: "Member",
+          pron: "she/her/hers",
+          image: {src: "https://lib.miamioh.edu/images/staff-photos/large_size/Makarowski-Rachel.jpg"}
+        },
+        {
+          name: "Brea McQueen",
+          role: "Member",
+          pron: "she/her/hers",
+          image: {src: "https://lib.miamioh.edu/images/staff-photos/large_size/McQueen-Brea.jpg"}
+        },
+        {
+          name: "Abi Morgan",
+          role: "Member",
+          pron: "she/her/hers",
+          image: {src: "https://lib.miamioh.edu/images/staff-photos/large_size/Morgan-Abigail.jpg"}
+        },
+        {
+          name: "Candace Pine",
+          role: "Member",
+          pron: "she/her/hers",
+          image: {src: "https://lib.miamioh.edu/images/staff-photos/large_size/Pine-Candace.jpg"}
+        },
+        {
+          name: "Elizabeth Staarmann",
+          role: "Member",
+          pron: "she/her/hers",
+          image: {src: "https://lib.miamioh.edu/images/staff-photos/large_size/Staarmann-Elizabeth.jpg"}
+        },
+        {
+          name: "Rich Wisneski",
+          role: "Member",
+          pron: "he/him/his",
+          image: {src: "https://lib.miamioh.edu/images/staff-photos/large_size/Wisneski-Richard.jpg"}
+        },
+        {
+          name: "Rob O'Brien Withers",
+          role: "Member",
+          pron: "he/him/his",
+          image: {src: "https://lib.miamioh.edu/images/staff-photos/large_size/Withers-Rob%20O'Brien.jpg"}
         },
       ],
     },
     {
-      title: 'Previous members',
+      title: "Previous Committee Members",
       people: [
         {
-          name: 'Chelsea Hagon',
-          role: 'Senior Developer',
-          image: { src: imageChelseaHagon },
+          name: 'Nela Ahmed',
+          role: 'Member',
+          pron: "2021-2023",
+          image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/Ahmed-Nela%20Louise.jpg" },
         },
         {
-          name: 'Emma Dorsey',
-          role: 'Senior Designer',
-          image: { src: imageEmmaDorsey },
+          name: 'Cara Calabrese',
+          role: 'Member',
+          pron: "2020-2022",
+          image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/Calabrese-Cara.jpg" },
         },
         {
-          name: 'Leonard Krasner',
-          role: 'VP, User Experience',
-          image: { src: imageLeonardKrasner },
+          name: 'Samantha Diebel',
+          role: 'Served as co-chair',
+          pron: "2020-2021",
+          image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/former/Diebel-Samantha%20Ann.jpg" },
         },
         {
-          name: 'Blake Reid',
-          role: 'Junior Copywriter',
-          image: { src: imageBlakeReid },
+          name: 'Ken Irwin',
+          role: 'Served as co-chair',
+          pron: "2020-2022",
+          image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/Irwin-Ken.jpg" },
         },
         {
-          name: 'Kathryn Murphy',
-          role: 'VP, Human Resources',
-          image: { src: imageKathrynMurphy },
+          name: 'Kim Hoffman',
+          role: 'Served as co-chair',
+          pron: "2020-2022",
+          image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/former/Hoffman-Kim.jpg" },
         },
         {
-          name: 'Whitney Francis',
-          role: 'Content Specialist',
-          image: { src: imageWhitneyFrancis },
+          name: 'Lissa Martin',
+          role: 'Member',
+          pron: "2020-2023",
+          image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/Martin-Lissa.jpg" },
         },
         {
-          name: 'Jeffrey Webb',
-          role: 'Account Coordinator',
-          image: { src: imageJeffreyWebb },
+          name: 'Rob Withers',
+          role: 'Member',
+          pron: "2020-2021",
+          image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/Withers-Rob%20O'Brien.jpg" },
         },
-        {
-          name: 'Benjamin Russel',
-          role: 'Senior Developer',
-          image: { src: imageBenjaminRussel },
-        },
-        {
-          name: 'Angela Fisher',
-          role: 'Front-end Developer',
-          image: { src: imageAngelaFisher },
-        },
-      ],
-    },
+      ]
+    }
   ]
