@@ -36,7 +36,7 @@ export const MENU_ITEMS: Array<MenuProps> = [
     linkGroups: [
       {
         label: "DEI Textbooks on Reserve",
-        link: "https://libguides.lib.miamioh.edu/reserves-textbooks/coursematerial",
+        link: "https://libguides.lib.miamioh.edu/diversity/textbooksonreserve",
       },
       {
         label: "Heath and Wellness Kits",

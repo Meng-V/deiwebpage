@@ -37,13 +37,13 @@ function Team() {
                             width={100} height={200}
                           />
                           <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
-                            <p className="font-display text-base/6 font-semibold tracking-wide text-white">
+                            <p className="font-display text-base/6 font-semibold tracking-wide text-white m-0">
                               {person.name} 
                             </p>
-                            <p className='text-sm text-white'>
+                            <p className='text-sm text-white m-0'>
                             ({person.pron})
                             </p>
-                            <p className="mt-2 text-sm text-white">
+                            <p className="mt-1 text-white m-0">
                               {person.role}
                             </p>
                           </div>

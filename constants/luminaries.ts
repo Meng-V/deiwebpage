@@ -1,5 +1,5 @@
 // LUMINARIES
-import MarlowZuchImage from "@/public/Luminaries/placeholder.jpg";
+import MarlowZuchImage from "@/public/Luminaries/MarlowZuch.jpg";
 import RomeroPearsonImage from "@/public/Luminaries/RomeroPearson.jpeg";
 import HalHowardImage from "@/public/Luminaries/HalHoward.jpeg";
 import AshleySankeyImage from "@/public/Luminaries/AshleySankey.jpeg";

@@ -141,7 +141,7 @@ const Luminaries = () => {
             >
               {lum.display.map((person, personIndex) => (
                 <div key={personIndex}>
-                  <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
+                  <div className="group relative h-[20rem] transform overflow-hidden rounded-4xl">
                     <div
                       className={clsx(
                         "absolute bottom-6 left-0 right-4 top-0 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6",

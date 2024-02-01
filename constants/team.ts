@@ -10,9 +10,15 @@ export const team = [
         },
         {
           name: 'Krista McDonald',
-          role: 'Chair',
+          role: 'Co-Chair',
           pron: "she/her/hers",
           image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/McDonald-Krista.jpg" },
+        },
+        {
+          name: "Rob O'Brien Withers",
+          role: "Co-Chair",
+          pron: "he/him/his",
+          image: {src: "https://lib.miamioh.edu/images/staff-photos/large_size/Withers-Rob%20O'Brien.jpg"}
         },
         {
           name: 'Laura Birkenhauer',
@@ -74,17 +80,20 @@ export const team = [
           pron: "he/him/his",
           image: {src: "https://lib.miamioh.edu/images/staff-photos/large_size/Wisneski-Richard.jpg"}
         },
-        {
-          name: "Rob O'Brien Withers",
-          role: "Member",
-          pron: "he/him/his",
-          image: {src: "https://lib.miamioh.edu/images/staff-photos/large_size/Withers-Rob%20O'Brien.jpg"}
-        },
+        
       ],
     },
     {
       title: "Previous Committee Members",
       people: [
+        {
+          name:'Elizabeth Kerr',
+          role: 'Member',
+        },
+        {
+          name: 'Elizabeth Staarman',
+          role: 'Member',
+        },
         {
           name: 'Nela Ahmed',
           role: 'Member',
@@ -120,12 +129,6 @@ export const team = [
           role: 'Member',
           pron: "2020-2023",
           image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/Martin-Lissa.jpg" },
-        },
-        {
-          name: 'Rob Withers',
-          role: 'Member',
-          pron: "2020-2021",
-          image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/Withers-Rob%20O'Brien.jpg" },
         },
       ]
     }
