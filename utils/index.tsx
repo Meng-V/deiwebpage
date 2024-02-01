@@ -1,6 +1,6 @@
 import Image from "next/image";
 import clsx from "clsx";
-
+import { BsArrowRightCircle } from "react-icons/bs";
 import backgroundImage from "@/public/background.jpg";
 
 export function BackgroundImage({
@@ -49,6 +49,7 @@ const Button = ({ type, title, icon, variant, full }: ButtonProps) => {
       }`}
     >
       {icon && <Image src={icon} alt={title} height={24} width={24} />}
+      <BsArrowRightCircle/>
       <label className="bold-16 whitespace-nowrap cursor-pointer">
         {title}
       </label>

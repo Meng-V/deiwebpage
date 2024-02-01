@@ -3,6 +3,7 @@ import Heritage from "@/components/Heritage";
 import Luminaries from "@/components/Luminaries";
 import DEIGrants from "@/components/DEIGrants";
 import { BlockMenu } from "@/components/BlockMenu";
+import { revalidatePath } from 'next/cache'
 
 export default function Home() {
   return (
@@ -15,3 +16,5 @@ export default function Home() {
     </>
   );
 }
+
+revalidatePath('/', 'layout')

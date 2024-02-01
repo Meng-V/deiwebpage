@@ -4,6 +4,7 @@ import Image from "next/image";
 import Button from "@/utils";
 import { heritage } from "@/constants/heritage";
 
+
 function MonthlyPrograms() {
   return (
     <div className="flex flex-1 items-start justify-center">
@@ -50,10 +51,10 @@ const Heritage = () => {
           <span>
             Miami University Libraries has joined the{" "}
             <a
-              href="https://www.miamioh.edu/diversity-inclusion/index.html"
+              href="https://miamioh.edu/transformational-inclusive-excellence/index.html"
               target="_blank"
             >
-              Office of Institutional Diversity & Inclusion
+              Office of Transformational and Inclusive Excellence
             </a>{" "}
             in celebrating history and heritage weeks, months, and special
             events. One of the primary ways the Libraries observe these
@@ -67,29 +68,14 @@ const Heritage = () => {
           </span>
           <span>
             More information on heritage programming, including a calendar of
-            observances, can be found{" "}
-            <a
-              href="https://www.miamioh.edu/diversity-inclusion/programs-resources/history-heritage-months/"
-              target="_blank"
-            >
-              here
-            </a>
-            .
+            observances, can be found below.
           </span>
 
-          <div className="flex items-start justify-start w-full flex-col gap-3 whitespace-nowrap">
-            <a href="https://www.miamioh.edu/diversity-inclusion/index.html" target="_blank">
-              <Button
-                type="button"
-                title="Office of Transformational and Inclusive Excellence"
-                variant="btn_white_no_left_padding"
-              />
-            </a>
+          <div className="flex items-start justify-start w-full flex-col gap-3 whitespace-nowrap">            
             <a href="https://www.miamioh.edu/diversity-inclusion/programs-resources/history-heritage-months/" target="_blank">
               <Button
                 type="button"
                 title="More information"
-                icon="/android.svg"
                 variant="btn_dark_green_outline"
                 full
               />
