@@ -40,9 +40,11 @@ function Team() {
                             <p className="font-display text-base/6 font-semibold tracking-wide text-white m-0">
                               {person.name} 
                             </p>
+                            {person.pron?
                             <p className='text-sm text-white m-0'>
                             ({person.pron})
-                            </p>
+                            </p> :
+                            <span></span>}
                             <p className="mt-1 text-white m-0">
                               {person.role}
                             </p>
@@ -72,6 +74,7 @@ import logoPhobia from '@/public/clients/phobia/logo-dark.svg'
 import logoUnseal from '@/public/clients/unseal/logo-dark.svg'
 import { SectionIntro } from '@/components/SectionIntro'
 import { GridList, GridListItem } from '@/components/GridList'
+import clsx from 'clsx'
 
 const clients = [
   ['FY21 Annual Report', logoPhobia],

@@ -89,10 +89,12 @@ export const team = [
         {
           name:'Elizabeth Kerr',
           role: 'Member',
+          image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/former/Kerr-Elizabeth.jpg" },
         },
         {
           name: 'Elizabeth Staarman',
           role: 'Member',
+          image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/Staarmann-Elizabeth.jpg" },
         },
         {
           name: 'Nela Ahmed',

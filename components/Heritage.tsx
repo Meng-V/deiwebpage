@@ -44,7 +44,7 @@ function MonthlyPrograms() {
 const Heritage = () => {
   return (
     <section className="section-container">
-      <h2>Heritage Program</h2>
+      <h2>History and Heritage Months</h2>
       <div className="max-container relative w-full flex flex-col py-12 lg:flex-row gap-12">
         <div className="flex w-full flex-1 flex-col items-start self-baseline justify-center gap-4 lg:gap-8">
           <span>
