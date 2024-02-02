@@ -104,7 +104,7 @@ const Luminaries = () => {
                       className={clsx(
                         "absolute left-[-0.5px] top-[0.5625rem] hidden h-1.5 w-1.5 overflow-visible lg:block",
                         lumIndex === selectedIndex
-                          ? "fill-blue-600 stroke-blue-600"
+                          ? "fill-red-600 stroke-red-600"
                           : "fill-transparent stroke-slate-400"
                       )}
                     />
@@ -113,7 +113,7 @@ const Luminaries = () => {
                         className={clsx(
                           "font-mono text-sm",
                           lumIndex === selectedIndex
-                            ? "text-blue-600"
+                            ? "text-slate-600"
                             : "text-slate-500"
                         )}
                       >
@@ -122,7 +122,11 @@ const Luminaries = () => {
                           {lum.year}
                         </Tab>
                       </div>
-                      <div className="mt-1.5 block text-2xl font-semibold tracking-tight text-blue-900 text-wrap-balance">
+                      <div className={
+                        clsx("mt-1.5 block text-2xl font-semibold tracking-tight text-wrap-balance", 
+                        lumIndex == selectedIndex?
+                        "text-miami_red": 
+                        "text-blue-900")}>
                         {lum.name}
                       </div>
                     </div>

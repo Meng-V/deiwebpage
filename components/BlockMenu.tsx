@@ -85,7 +85,7 @@ function DaySummary({ day }: { day: MenuProps }) {
       <h3
         className="
       text-center text-lg font-semibold lg:text-2xl 
-      tracking-tight text-blue-900 
+      tracking-tight text-blue-900
       h-10 2xl:h-8"
       >
         {day.title}
@@ -108,7 +108,7 @@ function TimeSlots({ day, className }: { day: MenuProps; className?: string }) {
           {timeSlotIndex > 0 && (
             <div className="mx-auto mb-8 h-px w-48 bg-indigo-500/10" />
           )}
-          <h4 className="text-blue-900 tracking-tight">
+          <h4 className="tracking-tight">
             <a href={`${timeSlot.link}`} target="_blank">{timeSlot.label}</a>
           </h4>
         </li>

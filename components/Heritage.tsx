@@ -16,7 +16,8 @@ function MonthlyPrograms() {
       >
         {heritage.map((file) => (
           <li key={file.title} className="relative">
-            <div className="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+            <div className="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg bg-gray-100 
+            focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
               <Image
                 src={file.img_source}
                 alt={file.title}
@@ -32,7 +33,7 @@ function MonthlyPrograms() {
                 <span className="sr-only">View details for {file.title}</span>
               </a>
             </div>
-            <p className="pointer-events-none mt-2 block text-sm font-medium text-orange-600">
+            <p className="pointer-events-none mt-2 block text-sm font-medium text-miami_accent_red">
               {file.title}
             </p>
           </li>

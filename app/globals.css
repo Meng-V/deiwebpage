@@ -21,6 +21,9 @@ section {
 a {
   @apply text-miami_accent_red;
 }
+a:hover{
+  @apply underline;
+}
 
 p{
   @apply my-4;
