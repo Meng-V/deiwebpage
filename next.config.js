@@ -9,9 +9,9 @@ const nextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
-      { protocol: "https", 
-        hostname: "lib.miamioh.edu" 
-      },
+      { protocol: "https", hostname: "lib.miamioh.edu" },
+      { protocol: "http", hostname: "localhost:3000" },
+      { protocol: "http", hostname: "localhost:4000" },
     ],
   },
 };
