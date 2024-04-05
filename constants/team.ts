@@ -82,14 +82,14 @@ export const team = [
       people: [
         {
           name:'Elizabeth Kerr',
-          role: 'Member',
+          role: 'Served as co-chair',
           pron: "2021-2024",
           image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/former/Kerr-Elizabeth.jpg" },
         },
         {
           name: 'Elizabeth Staarman',
           role: 'Member',
-          pron: "2021-2024",
+          pron: "2023",
           image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/Staarmann-Elizabeth.jpg" },
         },
         {
