@@ -69,12 +69,6 @@ export const team = [
           image: {src: "https://lib.miamioh.edu/images/staff-photos/large_size/Pine-Candace.jpg"}
         },
         {
-          name: "Elizabeth Staarmann",
-          role: "Member",
-          pron: "she/her/hers",
-          image: {src: "https://lib.miamioh.edu/images/staff-photos/large_size/Staarmann-Elizabeth.jpg"}
-        },
-        {
           name: "Rich Wisneski",
           role: "Member",
           pron: "he/him/his",
@@ -89,11 +83,13 @@ export const team = [
         {
           name:'Elizabeth Kerr',
           role: 'Member',
+          pron: "2021-2024",
           image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/former/Kerr-Elizabeth.jpg" },
         },
         {
           name: 'Elizabeth Staarman',
           role: 'Member',
+          pron: "2021-2024",
           image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/Staarmann-Elizabeth.jpg" },
         },
         {

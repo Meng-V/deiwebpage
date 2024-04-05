@@ -11,6 +11,7 @@ export const luminaries = [
     display: [
       {
         name: "Marlow Zuch",
+        profileLink: "",
         major: "History major",
         image: MarlowZuchImage,
         year: "Class of ‘26",
@@ -23,12 +24,14 @@ export const luminaries = [
     display: [
       {
         name: "Romero Pearson",
+        profileLink: "https://www.lib.miamioh.edu/2022-11-18-two-miami-students-participate-in-second-year-of-library-career-program",
         major: "Software Engineering major",
         image: RomeroPearsonImage,
         year: "Class of ‘24",
       },
       {
         name: "Hal Howard",
+        profileLink:"https://lib.miamioh.edu/2022-04-08-reflections-from-a-luminary-a-student-employee-blog",
         major: "Computer Science major",
         image: HalHowardImage,
         year: "Class of ‘23",
@@ -41,12 +44,14 @@ export const luminaries = [
     display: [
       {
         name: "Hal Howard",
+        profileLink:"https://lib.miamioh.edu/2022-04-08-reflections-from-a-luminary-a-student-employee-blog",
         major: "Computer Science major",
         image: HalHowardImage,
         year: "Class of ‘23",
       },
       {
         name: "Ashley Sankey",
+        profileLink: "https://www.lib.miamioh.edu/2021-10-12-meet-the-luminaries",
         major: "History major",
         image: AshleySankeyImage,
         year: "Class of ‘22",

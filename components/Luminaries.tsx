@@ -9,6 +9,7 @@ import clsx from "clsx";
 import { DiamondIcon } from "@/utils";
 
 import { luminaries } from "@/constants/luminaries";
+import Link from "next/link";
 
 function ImageClipPaths({
   id,
@@ -170,7 +171,7 @@ const Luminaries = () => {
                     </div>
                   </div>
                   <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
-                    {person.name}
+                    <Link href={person.profileLink}>{person.name}</Link>
                   </h3>
                   <p className="mt-1 text-base tracking-tight text-slate-500">
                     <span>{person.major}</span>
