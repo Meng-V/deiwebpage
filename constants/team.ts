@@ -12,7 +12,7 @@ export const team = [
           name: 'Krista McDonald',
           role: 'Co-Chair',
           pron: "she/her/hers",
-          image: { src: "https://lib.miamioh.edu/images/staff-photos/large_size/McDonald-Krista.jpg" },
+          image: { src: "https://d2jv02qf7xgjwx.cloudfront.net/accounts/8211/profiles/5542/Krista_smaller.jpg" },
         },
         {
           name: "Rob O'Brien Withers",
