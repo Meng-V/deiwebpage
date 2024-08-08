@@ -34,7 +34,13 @@ header {
   margin-left: -0.5em;
   padding: 0 0.25em 0 0.5em;
 }
+
+.navLinkItem a:link {
+  color: black;
+  text-decoration: none;
+}
 .navLinkItem a:link:hover {
+  color: white;
   text-decoration: none;
 }
 .navLinkItem:not(:first-child):hover {
