@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useState, Fragment } from "react";
-import { Tab } from "@headlessui/react";
+import { Tab, TabList, TabGroup, TabPanel, TabPanels } from "@headlessui/react";
 import clsx from "clsx";
 
 import { BackgroundImage } from "@/utils";
 import { Container } from "@/utils";
 import { MenuProps } from "@/types";
 import { MENU_ITEMS } from "@/constants";
+import Link from "next/link";
 
 function ScheduleTabbed() {
   let [tabOrientation, setTabOrientation] = useState("horizontal");
@@ -28,12 +29,12 @@ function ScheduleTabbed() {
   }, []);
 
   return (
-    <Tab.Group
+    <TabGroup
       as="div"
       className="mx-auto grid max-w-2xl grid-cols-1 gap-y-6 sm:grid-cols-2 lg:hidden"
       vertical={tabOrientation === "vertical"}
     >
-      <Tab.List
+      <TabList
         className="
       flex gap-x-0
       gap-y-10 overflow-x-auto pb-4 pl-4 
@@ -64,18 +65,18 @@ function ScheduleTabbed() {
             ))}
           </>
         )}
-      </Tab.List>
-      <Tab.Panels>
+      </TabList>
+      <TabPanels>
         {MENU_ITEMS.map((day, dayIndex) => (
-          <Tab.Panel
+          <TabPanel
             key={dayIndex}
             className="ui-not-focus-visible:outline-none"
           >
             <TimeSlots day={day} />
-          </Tab.Panel>
+          </TabPanel>
         ))}
-      </Tab.Panels>
-    </Tab.Group>
+      </TabPanels>
+    </TabGroup>
   );
 }
 
@@ -100,16 +101,19 @@ function TimeSlots({ day, className }: { day: MenuProps; className?: string }) {
       role="list"
       className={clsx(
         className,
-        "space-y-4 bg-white/60 px-10 py-14 text-center shadow-xl shadow-blue-900/5 backdrop-blur"
+        "space-y-4 bg-white/60 px-10 py-8 text-center shadow-xl shadow-blue-900/5 backdrop-blur divide-y divide-solid"
       )}
     >
       {day.linkGroups.map((timeSlot, timeSlotIndex) => (
         <li key={timeSlot.label} aria-label={`${timeSlot.label}`}>
-          {timeSlotIndex > 0 && (
-            <div className="mx-auto mb-8 h-px w-48 bg-indigo-500/10" />
-          )}
-          <h4 className="tracking-tight">
-            <a href={`${timeSlot.link}`} target="_blank">{timeSlot.label}</a>
+          <h4 className="tracking-tight mt-4">
+            <Link
+              className="visited:text-miami_accent_red"
+              href={`${timeSlot.link}`}
+              target="_blank"
+            >
+              {timeSlot.label}
+            </Link>
           </h4>
         </li>
       ))}

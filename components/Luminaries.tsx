@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 import { useEffect, useId, useState } from "react";
-import { Tab } from "@headlessui/react";
+import { Tab, TabList, TabGroup, TabPanel, TabPanels } from "@headlessui/react";
 import clsx from "clsx";
 
 import { DiamondIcon } from "@/utils";
@@ -89,14 +89,14 @@ const Luminaries = () => {
           </p>
         </div>
       </div>
-      <Tab.Group
+      <TabGroup
         as="div"
         className="mt-14 grid grid-cols-1 items-start gap-x-8 gap-y-8 sm:mt-16 sm:gap-y-16 lg:mt-24 lg:grid-cols-4"
         vertical={tabOrientation === "vertical"}
       >
         <div className="relative -mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:block sm:overflow-visible sm:pb-0">
           <div className="absolute bottom-0 left-0.5 top-2 hidden w-px bg-slate-200 lg:block" />
-          <Tab.List className="grid auto-cols-auto grid-flow-col justify-start gap-x-8 gap-y-10 whitespace-nowrap px-4 sm:mx-auto sm:max-w-2xl sm:grid-cols-3 sm:px-0 sm:text-center lg:grid-flow-row lg:grid-cols-1 lg:text-left">
+          <TabList className="grid auto-cols-auto grid-flow-col justify-start gap-x-8 gap-y-10 whitespace-nowrap px-4 sm:mx-auto sm:max-w-2xl sm:grid-cols-3 sm:px-0 sm:text-center lg:grid-flow-row lg:grid-cols-1 lg:text-left">
             {({ selectedIndex }) => (
               <>
                 {luminaries.map((lum, lumIndex) => (
@@ -123,11 +123,14 @@ const Luminaries = () => {
                           {lum.year}
                         </Tab>
                       </div>
-                      <div className={
-                        clsx("mt-1.5 block text-2xl font-semibold tracking-tight text-wrap-balance", 
-                        lumIndex == selectedIndex?
-                        "text-miami_red": 
-                        "text-blue-900")}>
+                      <div
+                        className={clsx(
+                          "mt-1.5 block text-2xl font-semibold tracking-tight text-wrap-balance",
+                          lumIndex == selectedIndex
+                            ? "text-miami_red"
+                            : "text-blue-900"
+                        )}
+                      >
                         {lum.name}
                       </div>
                     </div>
@@ -135,11 +138,11 @@ const Luminaries = () => {
                 ))}
               </>
             )}
-          </Tab.List>
+          </TabList>
         </div>
-        <Tab.Panels className="lg:col-span-3">
+        <TabPanels className="lg:col-span-3">
           {luminaries.map((lum) => (
-            <Tab.Panel
+            <TabPanel
               key={lum.name}
               className="grid grid-cols-1 gap-x-8 gap-y-10 ui-not-focus-visible:outline-none sm:grid-cols-2 sm:gap-y-16"
               unmount={false}
@@ -170,8 +173,13 @@ const Luminaries = () => {
                       />
                     </div>
                   </div>
-                  <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
-                    <Link href={person.profileLink}>{person.name}</Link>
+                  <h3 className="mt-8 font-display text-xl font-bold tracking-tight">
+                    <Link
+                      className="visited:text-miami_accent_red"
+                      href={person.profileLink}
+                    >
+                      {person.name}
+                    </Link>
                   </h3>
                   <p className="mt-1 text-base tracking-tight text-slate-500">
                     <span>{person.major}</span>
@@ -182,10 +190,10 @@ const Luminaries = () => {
                   </p>
                 </div>
               ))}
-            </Tab.Panel>
+            </TabPanel>
           ))}
-        </Tab.Panels>
-      </Tab.Group>
+        </TabPanels>
+      </TabGroup>
     </section>
   );
 };

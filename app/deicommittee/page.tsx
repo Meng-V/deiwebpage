@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import { Border } from '@/components/Border'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
@@ -9,9 +7,9 @@ import { team } from '@/constants/team'
 
 function Team() {
   return (
-    <Container className="mt-24 sm:mt-32 lg:mt-40">
+    <Container className="mt-12 lg:mt-20">
       <h2>Miami University Libraries' Diversity, Equity, and Inclusion Committee</h2>
-      <div className="space-y-24">
+      <div className="space-y-24 mt-12">
         {team.map((group) => (
           <FadeInStagger key={group.title}>
             <Border as={FadeIn} />
@@ -29,12 +27,11 @@ function Team() {
                   {group.people.map((person) => (
                     <li key={person.name}>
                       <FadeIn>
-                        <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
-                          <Image
+                        <div className="group relative overflow-hidden rounded-3xl bg-neutral-100 xs:mx-20 sm:mx-0">
+                          <img
                             alt=""
                             {...person.image}
                             className="h-96 w-full object-cover transition duration-500 motion-safe:group-hover:scale-105"
-                            width={100} height={200}
                           />
                           <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
                             <p className="font-display text-base/6 font-semibold tracking-wide text-white m-0">

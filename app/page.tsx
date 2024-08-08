@@ -6,12 +6,12 @@ import { BlockMenu } from "@/components/BlockMenu";
 
 export default function Home() {
   return (
-    <>
-      <Hero />
-      <BlockMenu />
-      <Heritage />
-      <Luminaries />
-      <DEIGrants />
-    </>
+    <div className="leading-7">
+      <Hero key="hero" />
+      <BlockMenu key="blockmenu" />
+      <Heritage key="heritage" />
+      <Luminaries key="luminaries" />
+      <DEIGrants key="deigrants" />
+    </div>
   );
 }
